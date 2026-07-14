@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the soft bunny xx — plant-based food, made beautiful</title>
+<meta name="description" content="the soft bunny xx (@thesoftbunnyxx) — sustainable gastronomy and plant-forward food curation across Sài Gòn and Orange County. Gentle content, curation and UGC for ethical, premium plant-based and eco-aware brands.">
+<meta property="og:title" content="the soft bunny xx">
+<meta property="og:description" content="plant-based food, made beautiful — gentle curation, ethical consumption and a table with room for everyone. sài gòn ↔ orange county.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M49,42 C46,32 47,20 50,15 C53,20 53,33 52,42 Z' fill='%23f7bfe3'/%3E%3Cpath d='M71,42 C74,32 73,20 70,15 C67,20 67,33 68,42 Z' fill='%23f7bfe3'/%3E%3Cg stroke='%234a3c66' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M48,52 C40,38 40,18 49,9 C57,15 58,36 55,51'/%3E%3Cpath d='M72,52 C80,38 80,18 71,9 C63,15 62,36 65,51'/%3E%3Cellipse cx='60' cy='74' rx='27' ry='23'/%3E%3Cpath d='M46,72 q4,4.5 8,0'/%3E%3Cpath d='M66,72 q4,4.5 8,0'/%3E%3C/g%3E%3Ccircle cx='41' cy='80' r='5.5' fill='%23f7bfe3'/%3E%3Ccircle cx='79' cy='80' r='5.5' fill='%23f7bfe3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<script async src="https://tally.so/widgets/embed.js"></script>
+<script>
+/* pre-paint — same keys as /links, so preferences follow across pages */
+(function(){var d=document.documentElement,s;try{s=localStorage}catch(e){return}
+  try{
+    var t=s.getItem('sb-site-theme');
+    if(t==='mono')d.classList.add('mono');
+    else if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark');
+    var z=s.getItem('sb-textsize'); if(z==='lg')d.classList.add('ts-lg'); if(z==='xl')d.classList.add('ts-xl');
+    if(s.getItem('sb-motion')==='1')d.classList.add('rm');
+  }catch(e){}
+})();
+</script>
+<style>
+/* ==========================================================================
+   the soft bunny xx — creator site · "Iridescent Dream", pastel pass
+   Ethereal glow + streamlined flow × media-kit depth.
+   Royal violet retired: accents are rose-orchid; surfaces are aurora pastels;
+   deep ink appears ONLY where reading requires it.
+   Plain CSS/JS, no build step.
+   ========================================================================== */
+:root{
+  --bg-primary:#fdf6fa;
+  --surface:rgba(255,255,255,.72);
+  --surface-solid:#fffdfe;
+  --surface-border:rgba(150,110,160,.16);
+  --text-primary:#4a3c66;      /* soft plum ink — ~9:1, reading only */
+  --text-secondary:#71628d;    /* ~5.2:1 */
+  --accent:#aa4d8f;            /* rose-orchid — links & small accents, ~5:1 */
+  --accent-hover:#8d3c76;
+  --accent-soft:rgba(214,116,183,.13);
+  --pink:#f7bfe3; --purple:#cfbcf0; --blue:#a5c4f7; --peach:#ffd6c2;
+  --aurora:linear-gradient(105deg,#f9c6e5 0%,#dcc4f4 38%,#b5cdf9 72%,#ffdcc9 100%);
+  --btn-ink:#43355e;
+  --halo:0 0 18px rgba(255,255,255,.75),0 0 44px rgba(247,191,227,.35),0 0 72px rgba(165,196,247,.22);
+  --frame-halo:0 24px 60px -44px rgba(150,110,160,.35);
+  --wash:.42;
+  --card-radius:1.25rem;
+  --font-display:'Poppins',system-ui,sans-serif;
+  --font-script:'Pinyon Script',cursive;
+  --font-body:'Montserrat',system-ui,sans-serif;
+}
+html.dark{
+  --bg-primary:#1a1622;
+  --surface:rgba(42,35,54,.7);
+  --surface-solid:#262032;
+  --surface-border:rgba(230,220,244,.14);
+  --text-primary:#eae2f4;
+  --text-secondary:#b3a6cc;
+  --accent:#e2a8d2; --accent-hover:#f0c2e2; --accent-soft:rgba(226,168,210,.15);
+  --pink:#dcaacf; --purple:#bcabdd; --blue:#9cb2e2; --peach:#e8bda8;
+  --aurora:linear-gradient(105deg,#dcaacf 0%,#bcabdd 38%,#9cb2e2 72%,#e8bda8 100%);
+  --btn-ink:#241d31;
+  --halo:0 0 1px rgba(26,22,34,.7),0 0 24px rgba(236,226,246,.22),0 0 56px rgba(220,170,207,.26);
+  --frame-halo:0 24px 60px -44px rgba(0,0,0,.55);
+  --wash:.5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{
+  margin:0;font-family:var(--font-body);font-weight:400;line-height:1.75;
+  color:var(--text-primary);background:var(--bg-primary);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  transition:background-color .5s cubic-bezier(.4,0,.2,1),color .5s cubic-bezier(.4,0,.2,1);
+}
+/* iridescent wash — the slow-breathing aurora behind everything */
+body::before{
+  content:'';position:fixed;inset:-30%;z-index:-2;pointer-events:none;opacity:var(--wash);
+  background:
+    radial-gradient(56% 50% at 82% 16%,rgba(249,193,229,.62) 0%,transparent 60%),
+    radial-gradient(50% 46% at 14% 26%,rgba(255,216,196,.42) 0%,transparent 62%),
+    radial-gradient(58% 58% at 10% 82%,rgba(165,196,247,.5) 0%,transparent 62%),
+    radial-gradient(64% 56% at 50% 46%,rgba(207,188,240,.48) 0%,transparent 72%),
+    linear-gradient(150deg,#fdeaf4 0%,#f6ecfc 40%,#ebf1fe 74%,#fff1ea 100%);
+  animation:aurora-drift 26s ease-in-out infinite alternate;
+}
+html.dark body::before{background:
+    radial-gradient(58% 52% at 84% 16%,rgba(220,170,207,.28),transparent 60%),
+    radial-gradient(58% 58% at 10% 84%,rgba(122,134,200,.24),transparent 62%),
+    linear-gradient(150deg,#221a2c 0%,#1b1626 60%,#161119 100%)}
+@keyframes aurora-drift{
+  0%{transform:translate(0,0) scale(1)}
+  100%{transform:translate(2.5%,-2%) scale(1.05)}
+}
+/* the journey — one document-tall gradient that shifts hue as you scroll:
+   rose (intro) → lavender (about) → periwinkle (content/approach) → peach (collab,
+   the warm decision moment) → rose (gallery) → lavender (connect). alphas stay low
+   so it reads as atmosphere, never as surface. */
+body{position:relative}
+.journey{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(249,198,229,.30) 0%,
+    rgba(255,214,194,.14) 13%,
+    rgba(207,188,240,.28) 28%,
+    rgba(165,196,247,.28) 46%,
+    rgba(207,188,240,.20) 60%,
+    rgba(255,214,194,.30) 74%,
+    rgba(249,198,229,.24) 88%,
+    rgba(207,188,240,.32) 100%)}
+html.dark .journey{background:linear-gradient(180deg,
+    rgba(220,170,207,.12) 0%,
+    rgba(232,189,168,.06) 13%,
+    rgba(188,171,221,.12) 28%,
+    rgba(156,178,226,.12) 46%,
+    rgba(188,171,221,.08) 60%,
+    rgba(232,189,168,.12) 74%,
+    rgba(220,170,207,.10) 88%,
+    rgba(188,171,221,.14) 100%)}
+/* soft white glow pools */
+body::after{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.46;
+  background:
+    radial-gradient(circle at 80% 22%,rgba(255,255,255,.62),transparent 13%),
+    radial-gradient(circle at 16% 72%,rgba(255,255,255,.48),transparent 12%);
+}
+html.dark body::after{opacity:.16}
+@media (prefers-reduced-motion:reduce){
+  body::before{animation:none}
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+img,svg{max-width:100%}
+
+h1,h2,h3{font-family:var(--font-display);margin:0 0 .4em;line-height:1.14;color:var(--text-primary)}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:200;letter-spacing:.01em;line-height:1.05}
+h2{font-size:clamp(1.9rem,4.4vw,2.7rem);font-weight:200}
+h2 em{font-style:normal;color:#c470ae;font-family:var(--font-script);font-size:1.35em;line-height:0}
+html.dark h2 em{color:#e2a8d2}
+h3{font-size:clamp(1.05rem,2.3vw,1.3rem);font-weight:400}
+p{max-width:62ch}
+strong{font-weight:600}
+.eyebrow{font-weight:600;font-size:.66rem;text-transform:uppercase;letter-spacing:.28em;color:var(--text-secondary);display:block;margin-bottom:.9rem}
+.eyebrow::before{content:'✦ ';color:var(--accent)}
+.lead{font-size:clamp(1rem,1.9vw,1.14rem);line-height:1.7;color:var(--text-secondary)}
+.small{font-size:.82rem;line-height:1.65;color:var(--text-secondary)}
+
+main{max-width:1040px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+section{padding:clamp(64px,10vh,110px) 0;position:relative}
+section+section{border-top:1px solid var(--surface-border)}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- fixed chrome ---------- */
+html.mono{
+  --bg-primary:#f6f6f7; --surface:rgba(255,255,255,.8); --surface-solid:#ffffff;
+  --surface-border:rgba(0,0,0,.14); --text-primary:#222226; --text-secondary:#55555c;
+  --accent:#222226; --accent-hover:#000000; --accent-soft:rgba(0,0,0,.06);
+  --pink:#c6c6cb; --purple:#d3d3d7; --blue:#cfcfd4; --peach:#dcdcdf;
+  --aurora:linear-gradient(105deg,#3a3a40,#26262b); --btn-ink:#f6f6f7;
+  --halo:none; --frame-halo:0 24px 60px -44px rgba(0,0,0,.25); --wash:0;
+}
+html.mono body::before,html.mono body::after,html.mono .journey,html.mono .sp{display:none}
+html.mono h2 em{color:#222226}
+html.mono .hero h1 .xx{background:#222226;-webkit-background-clip:text;background-clip:text}
+html.mono .btn-primary{box-shadow:0 12px 32px -14px rgba(0,0,0,.35)}
+html.mono .btn-primary:hover{filter:none;box-shadow:0 16px 38px -14px rgba(0,0,0,.45)}
+html.mono .ptile img{filter:grayscale(1)}
+html.ts-lg{font-size:109%}
+html.ts-xl{font-size:118%}
+html.rm *,html.rm *::before,html.rm *::after{animation:none!important;transition:none!important}
+/* floating display controls — same stack as /links */
+.fabs{position:fixed;left:1rem;bottom:1rem;z-index:60;display:flex;flex-direction:column;gap:.55rem}
+.fab{width:46px;height:46px;border-radius:50%;cursor:pointer;appearance:none;-webkit-appearance:none;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--surface-solid);border:1px solid var(--surface-border);color:var(--text-primary);
+  font-family:var(--font-body);font-size:.85rem;font-weight:600;letter-spacing:.06em;
+  box-shadow:0 10px 28px -16px rgba(150,110,160,.7);transition:transform .3s,box-shadow .3s}
+.fab:hover{transform:translateY(-2px);box-shadow:0 14px 32px -14px rgba(150,110,160,.8)}
+.panel{position:fixed;left:1rem;bottom:8.4rem;z-index:61;width:min(300px,calc(100vw - 2rem));
+  display:none;padding:1.1rem 1.15rem 1.2rem;border-radius:1.1rem;
+  background:var(--surface-solid);border:1px solid var(--surface-border);
+  box-shadow:0 30px 70px -30px rgba(90,60,110,.55)}
+.panel.open{display:block}
+.panel-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem}
+.panel-h span{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.x{background:none;border:0;cursor:pointer;color:var(--text-secondary);font-size:.8rem;padding:.2rem}
+.x:hover{color:var(--text-primary)}
+.row{margin-bottom:.9rem}
+.row:last-child{margin-bottom:0}
+.row h4{margin:0 0 .4rem;font-family:var(--font-body);font-size:.68rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary)}
+.seg{display:flex;gap:.3rem}
+.seg button{flex:1;padding:.45rem .3rem;border-radius:.6rem;cursor:pointer;font-family:inherit;
+  font-size:.72rem;color:var(--text-secondary);background:var(--surface);
+  border:1px solid var(--surface-border);transition:.25s}
+.seg button:hover{color:var(--text-primary)}
+.seg button[aria-pressed=true]{background:var(--aurora);color:var(--btn-ink);border-color:transparent;font-weight:600}
+.switch{width:100%;padding:.45rem;border-radius:.6rem;cursor:pointer;font-family:inherit;font-size:.72rem;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--text-secondary);
+  background:var(--surface);border:1px solid var(--surface-border);transition:.25s}
+.switch[aria-pressed=true]{background:var(--aurora);color:var(--btn-ink);border-color:transparent;font-weight:600}
+
+/* right-side section indicator with legible titles */
+.si{position:fixed;right:max(1.1rem,1.8vw);top:50%;transform:translateY(-50%);z-index:50;
+  display:none;flex-direction:column;gap:1.05rem;align-items:flex-end}
+@media(min-width:900px){.si{display:flex}}
+.si a{display:flex;align-items:center;gap:.65rem;line-height:1;user-select:none}
+.si .lb{font-family:var(--font-body);font-size:.62rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-primary);opacity:0;transform:translateX(6px);
+  transition:opacity .35s,transform .35s,font-weight .2s}
+.si .dt{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--text-primary);
+  opacity:.5;flex-shrink:0;transition:opacity .35s,background-color .35s,box-shadow .35s,border-color .35s}
+.si a.on .lb{font-weight:700;opacity:1;transform:none}
+.si a.on .dt{background:var(--pink);border-color:var(--accent);opacity:1;
+  box-shadow:0 0 0 4px var(--accent-soft),0 0 14px rgba(247,191,227,.7)}
+.si a:hover:not(.on) .lb{opacity:.6;transform:none}
+.si a:hover:not(.on) .dt{opacity:.85}
+@media(prefers-reduced-motion:reduce){.si .lb{transform:none}}
+
+/* drifting sparkles */
+.sparkles{position:fixed;inset:0;z-index:0;pointer-events:none}
+.sp{position:absolute;opacity:0;font-size:14px;
+  animation:sp-drift var(--dur,9s) ease-in-out infinite;animation-delay:var(--del,0s);
+  text-shadow:0 0 12px rgba(255,255,255,.9)}
+.sp:nth-child(odd){color:var(--pink)}
+.sp:nth-child(even){color:var(--blue)}
+.sp:nth-child(3n){color:var(--purple)}
+@keyframes sp-drift{
+  0%{opacity:0;transform:translate(0,0) scale(.7)}
+  18%{opacity:.85}
+  82%{opacity:.4}
+  100%{opacity:0;transform:translate(var(--dx,30px),var(--dy,-40px)) scale(1.1)}
+}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding-top:6vh;padding-bottom:0;border-top:none !important}
+.hero>*{animation:rise .95s cubic-bezier(.16,1,.3,1) both}
+.hero>*:nth-child(1){animation-delay:.05s}.hero>*:nth-child(2){animation-delay:.14s}
+.hero>*:nth-child(3){animation-delay:.22s}.hero>*:nth-child(4){animation-delay:.3s}
+.hero>*:nth-child(5){animation-delay:.38s}.hero>*:nth-child(6){animation-delay:.46s}
+.hero>*:nth-child(7){animation-delay:.54s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.mk-wrap{position:relative;margin-bottom:22px}
+.mk-wrap::before{content:'';position:absolute;inset:-46px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.95) 0%,rgba(249,198,229,.5) 42%,rgba(181,205,249,.3) 62%,transparent 74%);
+  filter:blur(10px);z-index:-1;animation:halo-breathe 6s ease-in-out infinite}
+@keyframes halo-breathe{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+html.dark .mk-wrap::before{background:radial-gradient(circle,rgba(236,226,246,.35) 0%,rgba(220,170,207,.25) 45%,transparent 72%)}
+.hero .mk{width:118px;height:118px;color:var(--text-primary);display:block;
+  animation:mk-float 7s ease-in-out infinite}
+@keyframes mk-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hero h1{text-shadow:var(--halo)}
+.hero h1 .xx{background:linear-gradient(105deg,#d581ba,#a98bd6,#7fa4e8);
+  -webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.04em}
+html.dark .hero h1 .xx{background:linear-gradient(105deg,#e8b3d8,#c3aee4,#a3b8ea);-webkit-background-clip:text;background-clip:text}
+.hero .script-line{font-family:var(--font-script);font-size:clamp(1.5rem,3.6vw,2.3rem);
+  color:#c470ae;margin:.1em 0 .5em;text-shadow:0 0 22px rgba(255,255,255,.85)}
+html.dark .hero .script-line{color:#e2a8d2}
+.hero .lead{max-width:44ch;margin:0 auto}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin:1.4rem 0 2rem}
+.chip{font-weight:600;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:.4rem .85rem;border-radius:999px;border:1px solid var(--surface-border);
+  color:var(--text-primary);background:var(--surface);backdrop-filter:blur(8px)}
+.chip:nth-child(4n+1){background:linear-gradient(120deg,rgba(249,198,229,.4),rgba(255,255,255,.7))}
+.chip:nth-child(4n+2){background:linear-gradient(120deg,rgba(220,196,244,.4),rgba(255,255,255,.7))}
+.chip:nth-child(4n+3){background:linear-gradient(120deg,rgba(181,205,249,.38),rgba(255,255,255,.7))}
+.chip:nth-child(4n+4){background:linear-gradient(120deg,rgba(255,220,201,.42),rgba(255,255,255,.7))}
+html.dark .chip{background:var(--surface)}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
+  font-family:var(--font-body);font-weight:600;font-size:.74rem;text-transform:uppercase;
+  letter-spacing:.15em;padding:1rem 2.1rem;border-radius:999px;border:1px solid transparent;
+  transition:transform .4s cubic-bezier(.25,1,.5,1),box-shadow .4s,filter .4s}
+.btn-primary{background:var(--aurora);color:var(--btn-ink);
+  box-shadow:0 12px 32px -14px rgba(214,116,183,.65),inset 0 1px 0 rgba(255,255,255,.65)}
+.btn-primary:hover{transform:translateY(-2px);filter:saturate(1.15) brightness(1.03);color:var(--btn-ink);
+  box-shadow:0 16px 38px -14px rgba(214,116,183,.75),0 0 24px rgba(249,198,229,.5),inset 0 1px 0 rgba(255,255,255,.65)}
+.btn-ghost{background:var(--surface);border-color:var(--surface-border);color:var(--text-primary);backdrop-filter:blur(8px)}
+.btn-ghost:hover{transform:translateY(-2px);color:var(--text-primary);box-shadow:0 0 20px rgba(249,198,229,.4)}
+button.btn{appearance:none;-webkit-appearance:none}
+/* form CTA — icon + wide-tracked label, with a slow sheen across the pill */
+.btn .ic{width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;transition:transform .5s cubic-bezier(.25,1,.5,1)}
+.btn:hover .ic{transform:translateY(-1px) rotate(-4deg)}
+.btn-form{position:relative;overflow:hidden}
+.btn-form::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.5) 50%,transparent 68%);
+  transform:translateX(-125%);transition:transform 1s cubic-bezier(.25,1,.5,1)}
+.btn-form:hover::after{transform:translateX(125%)}
+@media(prefers-reduced-motion:reduce){
+  .btn-form::after{display:none}
+  .btn:hover .ic{transform:none}
+}
+.scroll-hint{margin-top:2.4rem;color:var(--text-secondary);opacity:.6;font-size:1.1rem;animation:hint 2.6s ease-in-out infinite}
+@keyframes hint{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* gentle marquee ribbon */
+.ribbon{overflow:hidden;white-space:nowrap;padding:1.1rem 0;margin-top:3rem;width:100vw;
+  margin-left:calc(50% - 50vw);
+  border-top:1px solid var(--surface-border);border-bottom:1px solid var(--surface-border);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent)}
+.ribbon .track{display:inline-block;animation:mq 52s linear infinite}
+.ribbon span{font-size:.64rem;font-weight:600;letter-spacing:.26em;text-transform:lowercase;
+  color:var(--text-secondary);padding:0 1.4rem}
+.ribbon .sx{color:var(--accent);padding:0}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- cards & grids ---------- */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{position:relative;background:var(--surface);border:1px solid var(--surface-border);
+  border-radius:var(--card-radius);padding:24px;box-shadow:var(--frame-halo);
+  backdrop-filter:blur(12px) saturate(125%);-webkit-backdrop-filter:blur(12px) saturate(125%);
+  overflow:hidden;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--aurora);opacity:.75}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 64px -40px rgba(150,110,160,.5),0 0 24px rgba(249,198,229,.28)}
+.pill{display:inline-block;font-size:.6rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.16em;padding:.35rem .8rem;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.pullquote{font-family:var(--font-display);font-weight:200;
+  font-size:clamp(1.25rem,3vw,1.8rem);line-height:1.45;text-shadow:var(--halo);
+  border-left:2px solid var(--pink);padding:.2rem 0 .2rem 1.2rem;margin:1.4rem 0;max-width:40ch}
+.xx-divider{text-align:center;color:var(--accent);letter-spacing:.6em;padding:6px 0;font-size:.85rem}
+
+/* ---------- approach (system) ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px;counter-reset:fl}
+@media(max-width:860px){.flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.flow{grid-template-columns:1fr}}
+.f-step{position:relative;counter-increment:fl;background:var(--surface);border:1px solid var(--surface-border);
+  border-radius:var(--card-radius);padding:22px 20px;box-shadow:var(--frame-halo);backdrop-filter:blur(10px)}
+.f-step::before{content:counter(fl,decimal-leading-zero);font-family:var(--font-display);
+  font-weight:300;font-size:1.15rem;color:var(--accent);display:block;margin-bottom:.4rem}
+.f-step::after{content:'→';position:absolute;right:-15px;top:50%;transform:translateY(-50%);
+  color:var(--accent);opacity:.5;font-size:1rem;z-index:2}
+.f-step:last-child::after{content:none}
+@media(max-width:860px){.f-step::after{content:none}}
+.f-step h3{font-size:.98rem;font-weight:500;margin-bottom:.3rem}
+.f-step p{font-size:.8rem;line-height:1.6;color:var(--text-secondary);margin:0}
+.platforms{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:14px}
+.platforms span{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:lowercase;
+  padding:.4rem .9rem;border-radius:999px;border:1px solid var(--surface-border);
+  background:var(--surface);color:var(--text-secondary)}
+.platforms span::before{content:'✦ ';color:var(--pink)}
+
+/* ---------- collab ---------- */
+.svc{display:flex;flex-direction:column;gap:.4rem}
+.svc .price{font-family:var(--font-display);font-weight:300;font-size:1.35rem;color:var(--accent)}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+@media(max-width:640px){.fit{grid-template-columns:1fr}}
+.fit>div{border-radius:14px;padding:18px 20px;border:1px solid var(--surface-border)}
+.fit .yes{background:linear-gradient(135deg,rgba(181,205,249,.22),rgba(249,198,229,.18))}
+.fit .no{background:rgba(190,120,150,.09)}
+html.dark .fit .yes{background:rgba(156,178,226,.12)}
+html.dark .fit .no{background:rgba(220,150,175,.1)}
+.fit h3{margin-bottom:.5em;font-size:1rem}
+.fit ul{margin:0;padding-left:1.1rem}
+.fit li{margin:.3rem 0;font-size:.88rem;color:var(--text-secondary)}
+.steps{counter-reset:st;list-style:none;margin:26px 0 0;padding:0;display:grid;gap:12px}
+.steps li{counter-increment:st;display:flex;gap:16px;align-items:baseline;
+  background:var(--surface);border:1px solid var(--surface-border);border-radius:14px;
+  padding:16px 20px;font-size:.9rem;color:var(--text-secondary);backdrop-filter:blur(8px)}
+.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--font-display);
+  font-weight:300;font-size:1.3rem;color:var(--accent);flex-shrink:0}
+
+/* ---------- gallery ---------- */
+/* the plates — a dense mosaic of her own dishes, square keepsake tiles */
+.plates{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;grid-auto-flow:dense;margin-top:26px}
+.plates .pl{position:relative;aspect-ratio:1;border-radius:1rem;overflow:hidden;
+  border:1px solid var(--surface-border);box-shadow:var(--frame-halo);
+  transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s}
+.plates .pl:hover{transform:translateY(-4px);
+  box-shadow:0 26px 56px -34px rgba(150,110,160,.55),0 0 22px rgba(249,198,229,.32)}
+.plates .pl img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.1s cubic-bezier(.22,1,.36,1)}
+.plates .pl:hover img{transform:scale(1.05)}
+.plates .pl.big{grid-column:span 2;grid-row:span 2}
+html.mono .plates .pl img{filter:grayscale(1)}
+@media(max-width:860px){.plates{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.plates{grid-template-columns:repeat(2,1fr);gap:10px}}
+@media(prefers-reduced-motion:reduce){.plates .pl img{transition:none}.plates .pl:hover img{transform:none}}
+html.rm .plates .pl:hover img{transform:none}
+.gal-sub{margin-top:44px;font-weight:400;font-size:clamp(1.05rem,2.3vw,1.3rem)}
+.gal-sub .n{font-family:var(--font-script);color:#c470ae;font-size:1.5em;line-height:0;margin-right:.25rem}
+html.dark .gal-sub .n{color:#e2a8d2}
+/* feed screenshots — the grid itself, framed like keepsakes */
+.feedshots{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.feedshots a{position:relative;display:block;border-radius:var(--card-radius);overflow:hidden;
+  border:1px solid var(--surface-border);box-shadow:var(--frame-halo);
+  transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s}
+.feedshots a::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--aurora);opacity:.85;z-index:3}
+.feedshots a:first-child{grid-column:1/-1}
+.feedshots a:hover{transform:translateY(-5px);
+  box-shadow:0 30px 64px -38px rgba(150,110,160,.55),0 0 26px rgba(249,198,229,.35)}
+.feedshots img{display:block;width:100%;height:auto;
+  transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+.feedshots a:hover img{transform:scale(1.02)}
+.feedshots .veil{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(74,60,102,.55) 0%,rgba(74,60,102,.12) 26%,transparent 44%)}
+.feedshots .cap{position:absolute;left:20px;right:20px;bottom:16px;z-index:2;color:#fff;pointer-events:none}
+.feedshots .cap .s{display:block;font-size:.6rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;opacity:.85}
+.feedshots .cap .t{font-family:var(--font-display);font-weight:300;font-size:1.02rem;line-height:1.35;
+  text-shadow:0 1px 14px rgba(74,60,102,.6)}
+.feedshots .peek{position:absolute;right:18px;bottom:16px;z-index:2;color:#fff;font-size:.6rem;
+  font-weight:600;letter-spacing:.16em;text-transform:lowercase;opacity:0;transform:translateY(4px);
+  transition:opacity .4s,transform .4s;pointer-events:none}
+.feedshots a:hover .peek,.feedshots a:focus-visible .peek{opacity:.95;transform:none}
+html.mono .feedshots img{filter:grayscale(1)}
+@media(max-width:640px){
+  .feedshots{grid-template-columns:1fr}
+  .feedshots .cap .t{font-size:.9rem}
+  .feedshots .peek{display:none}
+}
+@media(prefers-reduced-motion:reduce){.feedshots img{transition:none}.feedshots a:hover img{transform:none}}
+html.rm .feedshots a:hover img{transform:none}
+
+/* ---------- connect ---------- */
+.connect{text-align:center;padding-bottom:120px}
+.connect .mk-wrap{display:inline-block}
+.connect .mk{width:74px;height:74px;color:var(--text-primary)}
+.connect h2{text-shadow:var(--halo)}
+.connect .lead{margin:0 auto 2rem;max-width:46ch}
+.socials{display:flex;gap:.7rem;justify-content:center;margin-top:2.4rem;flex-wrap:wrap}
+.socials a{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:lowercase;color:var(--text-secondary);
+  padding:.6rem 1.1rem;border:1px solid var(--surface-border);border-radius:999px;
+  background:var(--surface);backdrop-filter:blur(8px);transition:transform .3s,color .3s,box-shadow .3s}
+.socials a:hover{transform:translateY(-2px);color:var(--accent);box-shadow:0 0 18px rgba(249,198,229,.4)}
+.socials a::before{content:'✦';color:var(--pink);font-size:.8em}
+footer{text-align:center;padding:30px 0 42px;font-size:.66rem;letter-spacing:.14em;
+  text-transform:lowercase;color:var(--text-secondary);border-top:1px solid var(--surface-border)}
+footer a{color:var(--text-secondary)}
+footer a:hover{color:var(--accent)}
+
+/* ---------- past-partnership strip: glass tiles gliding both ways ---------- */
+.partners{margin-top:18px}
+.p-strip{display:flex;flex-direction:column;gap:12px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.prow{display:flex;width:max-content;animation:pdrift 70s linear infinite}
+.prow.rev{animation-direction:reverse;animation-duration:84s}
+.prow:hover,.prow:focus-within{animation-play-state:paused}
+.pgrp{display:flex;gap:12px;padding-right:12px}
+@keyframes pdrift{to{transform:translateX(-50%)}}
+.ptile{display:flex;align-items:center;gap:10px;padding:8px 16px 8px 9px;border-radius:16px;
+  background:var(--surface);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid var(--surface-border);
+  box-shadow:0 10px 26px -18px rgba(150,110,160,.55);
+  transition:transform .35s cubic-bezier(.25,1,.5,1),box-shadow .35s,border-color .35s}
+.ptile:hover{transform:translateY(-2px);border-color:rgba(214,116,183,.35);
+  box-shadow:0 16px 32px -18px rgba(150,110,160,.6),0 0 18px rgba(249,198,229,.3)}
+.ptile img{width:44px;height:44px;border-radius:10px;object-fit:contain;display:block;
+  background:#fff;padding:3px;box-sizing:border-box}
+.ptile .pmono{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  background:var(--aurora);color:var(--btn-ink);font-weight:600;font-size:.82rem;
+  text-transform:uppercase;letter-spacing:.05em;flex-shrink:0}
+.ptile .pn{font-size:.7rem;font-weight:600;letter-spacing:.05em;color:var(--text-secondary);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.prow{animation:none}.p-strip{overflow-x:auto}}
+.hero-partners{width:min(100%,880px);margin-top:34px}
+.hp-note{font-size:.72rem;line-height:1.6;letter-spacing:.03em;color:var(--text-secondary);
+  margin:0 auto 12px;max-width:64ch}
+.partners-hero{margin-top:0}
+.partners-hero .prow{animation-duration:88s}
+.partners-hero .ptile{padding:6px 12px 6px 7px;border-radius:13px}
+.partners-hero .ptile img,.partners-hero .ptile .pmono{width:34px;height:34px;border-radius:8px}
+.partners-hero .ptile .pmono{font-size:.66rem}
+.partners-hero .ptile .pn{font-size:.62rem}
+</style>
+</head>
+<body>
+<div class="journey" aria-hidden="true"></div>
+
+<div class="fabs">
+  <button class="fab" id="themeFab" type="button" aria-label="Colour mode: light, dark or mono" title="light · dark · mono">◑</button>
+  <button class="fab" id="setFab" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Display settings">⚙</button>
+</div>
+<div class="panel" id="panel" role="dialog" aria-label="Display settings">
+  <div class="panel-h"><span>settings</span>
+    <button class="x" id="setClose" type="button" aria-label="Close settings">✕</button></div>
+  <div class="row"><h4>theme</h4>
+    <div class="seg" role="group" aria-label="Theme">
+      <button type="button" data-theme="auto" aria-pressed="true">auto</button><button type="button" data-theme="light" aria-pressed="false">light</button><button type="button" data-theme="dark" aria-pressed="false">dark</button><button type="button" data-theme="mono" aria-pressed="false">mono</button>
+    </div></div>
+  <div class="row"><h4>text size</h4>
+    <div class="seg" role="group" aria-label="Text size">
+      <button type="button" data-size="md" aria-pressed="true" aria-label="Default text size" style="font-size:.74rem">A</button><button type="button" data-size="lg" aria-pressed="false" aria-label="Large text size" style="font-size:.88rem">A</button><button type="button" data-size="xl" aria-pressed="false" aria-label="Extra large text size" style="font-size:1.02rem">A</button>
+    </div></div>
+  <div class="row"><h4>reduce motion</h4>
+    <button class="switch" id="motionBtn" type="button" aria-pressed="false">off</button></div>
+</div>
+
+<!-- drifting sparkles -->
+<div class="sparkles" aria-hidden="true">
+  <span class="sp" style="top:9%;left:8%;--dur:8s;--del:0s;--dx:36px;--dy:-30px">✦</span>
+  <span class="sp" style="top:16%;left:86%;--dur:11s;--del:1.2s;--dx:-40px;--dy:22px">✦</span>
+  <span class="sp" style="top:38%;left:5%;--dur:9s;--del:2.1s;--dx:44px;--dy:14px;font-size:10px">✦</span>
+  <span class="sp" style="top:55%;left:92%;--dur:10s;--del:.6s;--dx:-28px;--dy:40px;font-size:11px">✦</span>
+  <span class="sp" style="top:74%;left:12%;--dur:12s;--del:1.7s;--dx:30px;--dy:-38px">✦</span>
+  <span class="sp" style="top:86%;left:80%;--dur:9s;--del:.3s;--dx:-36px;--dy:-20px;font-size:10px">✦</span>
+</div>
+
+<!-- right-side section indicator -->
+<nav class="si" aria-label="Sections">
+  <a href="#intro"    data-s="intro"><span class="lb">intro</span><span class="dt"></span></a>
+  <a href="#about"    data-s="about"><span class="lb">about</span><span class="dt"></span></a>
+  <a href="#content"  data-s="content"><span class="lb">content</span><span class="dt"></span></a>
+  <a href="#approach" data-s="approach"><span class="lb">approach</span><span class="dt"></span></a>
+  <a href="#collab"   data-s="collab"><span class="lb">collab</span><span class="dt"></span></a>
+  <a href="#gallery"  data-s="gallery"><span class="lb">gallery</span><span class="dt"></span></a>
+  <a href="#connect"  data-s="connect"><span class="lb">connect</span><span class="dt"></span></a>
+</nav>
+
+<main>
+
+  <!-- ================= INTRO ================= -->
+  <section class="hero" id="intro">
+    <div class="mk-wrap">
+      <svg class="mk" viewBox="0 0 120 120" fill="none" role="img" aria-label="the soft bunny mark">
+        <path d="M49,42 C46,32 47,20 50,15 C53,20 53,33 52,42 Z" fill="var(--pink)" opacity=".85"/>
+        <path d="M71,42 C74,32 73,20 70,15 C67,20 67,33 68,42 Z" fill="var(--pink)" opacity=".85"/>
+        <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M48,52 C40,38 40,18 49,9 C57,15 58,36 55,51"/>
+          <path d="M72,52 C80,38 80,18 71,9 C63,15 62,36 65,51"/>
+          <ellipse cx="60" cy="74" rx="27" ry="23"/>
+          <path d="M46,72 q4,4.5 8,0"/><path d="M66,72 q4,4.5 8,0"/>
+          <path d="M56,80 q2,2.5 4,0 q2,2.5 4,0" stroke-width="2.4"/>
+        </g>
+        <circle cx="41" cy="80" r="4.5" fill="var(--pink)" opacity=".8"/>
+        <circle cx="79" cy="80" r="4.5" fill="var(--pink)" opacity=".8"/>
+        <path d="M98 22 l1.7 4.4 4.4 1.7 -4.4 1.7 -1.7 4.4 -1.7 -4.4 -4.4 -1.7 4.4 -1.7 z" fill="var(--pink)"/>
+      </svg>
+    </div>
+    <h1>the soft bunny <span class="xx">xx</span></h1>
+    <div class="script-line">plant-based food, made beautiful</div>
+    <p class="lead">plant-forward curation — sustainable gastronomy, ethical consumption, and a table with room for everybody. sài gòn ↔ orange county.</p>
+    <div class="chips">
+      <span class="chip">gastronomy</span><span class="chip">plant-forward</span><span class="chip">eco-aware</span>
+      <span class="chip">wellness</span><span class="chip">happiness</span><span class="chip">for everybody</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#collab" data-track="hero-work">work with me</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="hero-instagram">✦ @thesoftbunnyxx</a>
+    </div>
+    <div class="hero-partners">
+      <p class="hp-note"><strong>creation &amp; partnerships</strong> — i produce, edit, post, and market every piece myself, for eco-aware, plant-based, and sustainable companies such as:</p>
+      <div class="partners partners-hero" aria-label="Past brand partnerships"><div class="p-strip" role="list"><div class="prow"><div class="pgrp"><span class="ptile" role="listitem" aria-label="nutpods"><img src="assets/partners/nutpods.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">nutpods</span></span><span class="ptile" role="listitem" aria-label="urth box"><img src="assets/partners/urthbox.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">urth box</span></span><span class="ptile" role="listitem" aria-label="unmeat"><img src="assets/partners/unmeat.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">unmeat</span></span><span class="ptile" role="listitem" aria-label="kinnikinnick foods"><img src="assets/partners/kinnikinnick.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">kinnikinnick foods</span></span><span class="ptile" role="listitem" aria-label="mike’s organic foods"><img src="assets/partners/mikes-organic.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">mike’s organic foods</span></span><span class="ptile" role="listitem" aria-label="cole & mason"><img src="assets/partners/cole-mason.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">cole &amp; mason</span></span><span class="ptile" role="listitem" aria-label="joi plant milk"><img src="assets/partners/joi.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">joi plant milk</span></span><span class="ptile" role="listitem" aria-label="the rogue panda"><img src="assets/partners/rogue-panda.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">the rogue panda</span></span><span class="ptile" role="listitem" aria-label="cosmic bliss"><img src="assets/partners/cosmic-bliss.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">cosmic bliss</span></span><span class="ptile" role="listitem" aria-label="plant therapy"><img src="assets/partners/plant-therapy.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">plant therapy</span></span><span class="ptile" role="listitem" aria-label="pure encapsulations"><img src="assets/partners/pure-encapsulations.webp" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">pure encapsulations</span></span><span class="ptile" role="listitem" aria-label="mixsoon"><img src="assets/partners/mixsoon.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">mixsoon</span></span><span class="ptile" role="listitem" aria-label="calgee"><img src="assets/partners/calgee.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">calgee</span></span><span class="ptile" role="listitem" aria-label="chlorophyll water"><img src="assets/partners/chlorophyll-water.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">chlorophyll water</span></span><span class="ptile" role="listitem" aria-label="naked sundays"><img src="assets/partners/naked-sundays.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">naked sundays</span></span><span class="ptile" role="listitem" aria-label="physician’s choice"><img src="assets/partners/physicians-choice.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">physician&#8217;s choice</span></span><span class="ptile" role="listitem" aria-label="activist skincare"><img src="assets/partners/activist-skincare.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">activist skincare</span></span><span class="ptile" role="listitem" aria-label="better alt"><img src="assets/partners/better-alt.webp" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">better alt</span></span><span class="ptile" role="listitem" aria-label="simple modern"><img src="assets/partners/simple-modern.webp" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">simple modern</span></span><span class="ptile" role="listitem" aria-label="mary ruth’s"><img src="assets/partners/mary-ruths.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">mary ruth&#8217;s</span></span></div><div class="pgrp" aria-hidden="true"><span class="ptile" role="listitem" aria-label="nutpods"><img src="assets/partners/nutpods.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">nutpods</span></span><span class="ptile" role="listitem" aria-label="urth box"><img src="assets/partners/urthbox.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">urth box</span></span><span class="ptile" role="listitem" aria-label="unmeat"><img src="assets/partners/unmeat.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">unmeat</span></span><span class="ptile" role="listitem" aria-label="kinnikinnick foods"><img src="assets/partners/kinnikinnick.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">kinnikinnick foods</span></span><span class="ptile" role="listitem" aria-label="mike’s organic foods"><img src="assets/partners/mikes-organic.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">mike’s organic foods</span></span><span class="ptile" role="listitem" aria-label="cole & mason"><img src="assets/partners/cole-mason.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">cole &amp; mason</span></span><span class="ptile" role="listitem" aria-label="joi plant milk"><img src="assets/partners/joi.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">joi plant milk</span></span><span class="ptile" role="listitem" aria-label="the rogue panda"><img src="assets/partners/rogue-panda.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">the rogue panda</span></span><span class="ptile" role="listitem" aria-label="cosmic bliss"><img src="assets/partners/cosmic-bliss.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">cosmic bliss</span></span><span class="ptile" role="listitem" aria-label="plant therapy"><img src="assets/partners/plant-therapy.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">plant therapy</span></span><span class="ptile" role="listitem" aria-label="pure encapsulations"><img src="assets/partners/pure-encapsulations.webp" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">pure encapsulations</span></span><span class="ptile" role="listitem" aria-label="mixsoon"><img src="assets/partners/mixsoon.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">mixsoon</span></span><span class="ptile" role="listitem" aria-label="calgee"><img src="assets/partners/calgee.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">calgee</span></span><span class="ptile" role="listitem" aria-label="chlorophyll water"><img src="assets/partners/chlorophyll-water.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">chlorophyll water</span></span><span class="ptile" role="listitem" aria-label="naked sundays"><img src="assets/partners/naked-sundays.jpeg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">naked sundays</span></span><span class="ptile" role="listitem" aria-label="physician’s choice"><img src="assets/partners/physicians-choice.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">physician&#8217;s choice</span></span><span class="ptile" role="listitem" aria-label="activist skincare"><img src="assets/partners/activist-skincare.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">activist skincare</span></span><span class="ptile" role="listitem" aria-label="better alt"><img src="assets/partners/better-alt.webp" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">better alt</span></span><span class="ptile" role="listitem" aria-label="simple modern"><img src="assets/partners/simple-modern.webp" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">simple modern</span></span><span class="ptile" role="listitem" aria-label="mary ruth’s"><img src="assets/partners/mary-ruths.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="pn">mary ruth&#8217;s</span></span></div></div></div></div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">↓</div>
+    <div class="ribbon" aria-hidden="true">
+      <div class="track">
+        <span>plant-forward</span><span class="sx">✦</span><span>sustainable</span><span class="sx">✦</span><span>ethical</span><span class="sx">✦</span><span>vegan</span><span class="sx">✦</span><span>sài gòn ↔ orange county</span><span class="sx">✦</span><span>one beautiful thing</span><span class="sx">✦</span><span>the soft table</span><span class="sx">✦</span><span>well &amp; strong</span><span class="sx">✦</span><span>the gentle pantry</span><span class="sx">✦</span><span>plant-forward</span><span class="sx">✦</span><span>sustainable</span><span class="sx">✦</span><span>ethical</span><span class="sx">✦</span><span>vegan</span><span class="sx">✦</span><span>sài gòn ↔ orange county</span><span class="sx">✦</span><span>one beautiful thing</span><span class="sx">✦</span><span>the soft table</span><span class="sx">✦</span><span>well &amp; strong</span><span class="sx">✦</span><span>the gentle pantry</span><span class="sx">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="reveal">
+      <span class="eyebrow">about</span>
+      <h2>a curator of <em>gentle</em> well-being</h2>
+      <p class="lead">i cook and eat plant-forward, every day — and i know how joyless that corner of the internet can be. the soft bunny exists to make it beautiful instead: dreamy, inclusive food discovery rooted in sài gòn and orange county's little saigon, shared with readers around the world.</p>
+      <div class="pullquote">gentle reminders to savor the earth, your health, and the meal in front of you — practically, simply, without pressure.</div>
+    </div>
+    <div class="grid g3 reveal">
+      <div class="card"><span class="pill">essence</span><h3 style="margin-top:.8rem">well &amp; happy, gently</h3><p class="small">feeling good, strong, and calm — wellness as kindness, never as homework.</p></div>
+      <div class="card"><span class="pill">credential</span><h3 style="margin-top:.8rem">lived, not covered</h3><p class="small">not a trend i report on — a life i navigate daily, in one of the world's most naturally plant-rich cuisines.</p></div>
+      <div class="card"><span class="pill">craft</span><h3 style="margin-top:.8rem">curation, not noise</h3><p class="small">trusted judgment shared as guides, maps, and gentle recommendations — alongside brands aligned with the same vision.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTENT ================= -->
+  <section id="content">
+    <div class="reveal">
+      <span class="eyebrow">content</span>
+      <h2>four <em>soft</em> series</h2>
+      <p class="lead">repeatable formats with a consistent, dreamy look — soft light, close texture, one calm subject per frame. two to three gentle posts a week; consistency over volume.</p>
+    </div>
+    <div class="grid g2 reveal" style="margin-top:26px">
+      <div class="card"><h3>one beautiful thing</h3><p class="small">a fifteen-second savoring clip — one pour, one bowl, one bite that genuinely felt good. the signature format: quiet, sensory, deeply saveable.</p></div>
+      <div class="card"><h3>the soft table</h3><p class="small">curated, inclusive place discovery — plant-forward, allergen-friendly spots across sài gòn &amp; little saigon. every post feeds the guide readers actually use.</p></div>
+      <div class="card"><h3>well &amp; strong</h3><p class="small">gentle wellness and fitness — nourishing an active, plant-forward life. protein and energy without compromise. kind, never calorie-y.</p></div>
+      <div class="card"><h3>the gentle pantry</h3><p class="small">the plant-forward palette: banana blossom, jackfruit, lotus, taro, mushroom, rice paper, coconut aminos. the ingredients that make this way of cooking a pleasure, not a workaround.</p></div>
+    </div>
+    <div class="xx-divider reveal" aria-hidden="true">✦ ✦</div>
+  </section>
+
+  <!-- ================= APPROACH ================= -->
+  <section id="approach">
+    <div class="reveal">
+      <span class="eyebrow">approach</span>
+      <h2>more than a feed — a <em>system</em></h2>
+      <p class="lead">every post is built to become something a reader keeps: a saved clip, a mini-guide in their dms, a place on their map. that's what a partnership taps into — not an impression that scrolls away, but a recommendation that gets used.</p>
+    </div>
+    <h3 class="reveal" style="margin-top:34px">the soft table loop</h3>
+    <div class="flow reveal">
+      <div class="f-step"><h3>a gentle post</h3><p>a savoring reel or soft-table carousel — made to be saved, not just seen.</p></div>
+      <div class="f-step"><h3>comment map 🐇</h3><p>readers comment for the free one-page guide — warm, automatic, personal.</p></div>
+      <div class="f-step"><h3>a guide by dm</h3><p>the mini-map arrives in their messages — real utility, in exchange for an email.</p></div>
+      <div class="f-step"><h3>the owned table</h3><p>an email list and the soft bunny table guide — an audience i can reach directly, forever.</p></div>
+    </div>
+    <div class="grid g3 reveal" style="margin-top:26px">
+      <div class="card"><h3 style="font-size:1rem">two cities, one cuisine</h3><p class="small">sài gòn ↔ orange county's little saigon — the same food culture, on both sides of the pacific.</p></div>
+      <div class="card"><h3 style="font-size:1rem">an audience that reads labels</h3><p class="small">people who read labels — for sourcing, ethics, and allergens — research before they buy. when they trust a recommendation, they act on it.</p></div>
+      <div class="card"><h3 style="font-size:1rem">made to be kept</h3><p class="small">save-first formats — guides, maps, and pantry lists that readers return to long after posting day.</p></div>
+    </div>
+    <div class="card reveal" style="margin-top:22px">
+      <span class="pill">roots</span>
+      <h3 style="margin-top:.8rem">the soft bunny xx foundation</h3>
+      <p class="small">the brand grew from a registered nonprofit advocating food sovereignty — the belief that delicious, nutritious food is a right for all beings. the values aren't a marketing angle; they're the origin story.</p>
+      <div class="platforms" aria-label="Platforms">
+        <span>instagram</span><span>tiktok</span><span>youtube</span><span>pinterest</span><span>threads</span><span>lemon8</span><span>bluesky</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COLLAB ================= -->
+  <section id="collab">
+    <div class="reveal">
+      <span class="eyebrow">collab</span>
+      <h2>work <em>with</em> me</h2>
+      <p class="lead">i partner selectively with brands my readers can actually use — and say no to everything else. that restraint is why a soft bunny recommendation converts.</p>
+    </div>
+    <div class="grid g3 reveal" style="margin-top:26px">
+      <div class="card svc">
+        <span class="pill">on feed</span>
+        <h3 style="margin-top:.8rem">sponsored reel or carousel</h3>
+        <p class="small">a dedicated post in one of the four series, in my voice and light — concept, shoot, edit, caption, and a usage window for your channels.</p>
+        <!-- EDIT ME: set your real rate -->
+        <div class="price">rates on request</div>
+      </div>
+      <div class="card svc">
+        <span class="pill">for your channels</span>
+        <h3 style="margin-top:.8rem">ugc &amp; food styling</h3>
+        <p class="small">dreamy product and dish content shot for your own feed and ads — no posting on mine required. styled, edited, delivered ready to publish.</p>
+        <!-- EDIT ME: set your real rate -->
+        <div class="price">from $150 · a set of 3 styled photos + 1 short clip</div>
+      </div>
+      <div class="card svc">
+        <span class="pill">in the guides</span>
+        <h3 style="margin-top:.8rem">featured placement</h3>
+        <p class="small">a home in the soft table guides and the gentle pantry — evergreen placement readers return to, not a post that scrolls away.</p>
+        <!-- EDIT ME: set your real rate -->
+        <div class="price">rates on request</div>
+      </div>
+    </div>
+    <div class="fit reveal">
+      <div class="yes">
+        <h3>◆ a lovely fit</h3>
+        <ul>
+          <li>sustainable, ethically-sourced pantry brands</li>
+          <li>premium plant-based food, cafés, and restaurants</li>
+          <li>eco-aware kitchen, home, and wellness</li>
+          <li>gentle fitness and recovery for everybody</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>◆ not our table</h3>
+        <p class="small" style="margin:.2em 0 .6em">if it makes people feel less worthy around a table, it's not for us.</p>
+        <ul>
+          <li>diet-culture, detox or weight-loss framing</li>
+          <li>calorie / macro-tracking products</li>
+          <li>greenwashing, or anything my readers couldn't trust</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="reveal" style="margin-top:34px">how we work</h3>
+    <ol class="steps reveal">
+      <li><strong>say hello</strong> — a dm or email with your product and what you're hoping for.</li>
+      <li><strong>i test everything</strong> — i make sure it's genuinely safe and lovely for my readers; i test, taste, and use it myself.</li>
+      <li><strong>one clear page</strong> — we agree scope, timeline, and usage. no surprises.</li>
+      <li><strong>soft, luminous content</strong> — you get content your audience will actually save.</li>
+    </ol>
+    <p class="small reveal" style="margin-top:18px"><strong>creation &amp; partnerships</strong> — i produce, edit, post, and market every piece myself. i’ve worked with eco-aware, plant-based, and sustainable companies such as:</p>
+    <div class="partners reveal" aria-label="Past brand partnerships"><div class="p-strip" role="list"><div class="prow"><div class="pgrp"><span class="ptile" role="listitem" aria-label="nutpods"><img src="assets/partners/nutpods.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">nutpods</span></span><span class="ptile" role="listitem" aria-label="urth box"><img src="assets/partners/urthbox.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">urth box</span></span><span class="ptile" role="listitem" aria-label="unmeat"><img src="assets/partners/unmeat.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">unmeat</span></span><span class="ptile" role="listitem" aria-label="kinnikinnick foods"><img src="assets/partners/kinnikinnick.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">kinnikinnick foods</span></span><span class="ptile" role="listitem" aria-label="mike’s organic foods"><img src="assets/partners/mikes-organic.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">mike’s organic foods</span></span><span class="ptile" role="listitem" aria-label="cole & mason"><img src="assets/partners/cole-mason.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">cole &amp; mason</span></span><span class="ptile" role="listitem" aria-label="joi plant milk"><img src="assets/partners/joi.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">joi plant milk</span></span><span class="ptile" role="listitem" aria-label="the rogue panda"><img src="assets/partners/rogue-panda.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">the rogue panda</span></span><span class="ptile" role="listitem" aria-label="cosmic bliss"><img src="assets/partners/cosmic-bliss.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">cosmic bliss</span></span><span class="ptile" role="listitem" aria-label="plant therapy"><img src="assets/partners/plant-therapy.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">plant therapy</span></span></div><div class="pgrp" aria-hidden="true"><span class="ptile" role="listitem" aria-label="nutpods"><img src="assets/partners/nutpods.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">nutpods</span></span><span class="ptile" role="listitem" aria-label="urth box"><img src="assets/partners/urthbox.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">urth box</span></span><span class="ptile" role="listitem" aria-label="unmeat"><img src="assets/partners/unmeat.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">unmeat</span></span><span class="ptile" role="listitem" aria-label="kinnikinnick foods"><img src="assets/partners/kinnikinnick.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">kinnikinnick foods</span></span><span class="ptile" role="listitem" aria-label="mike’s organic foods"><img src="assets/partners/mikes-organic.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">mike’s organic foods</span></span><span class="ptile" role="listitem" aria-label="cole & mason"><img src="assets/partners/cole-mason.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">cole &amp; mason</span></span><span class="ptile" role="listitem" aria-label="joi plant milk"><img src="assets/partners/joi.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">joi plant milk</span></span><span class="ptile" role="listitem" aria-label="the rogue panda"><img src="assets/partners/rogue-panda.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">the rogue panda</span></span><span class="ptile" role="listitem" aria-label="cosmic bliss"><img src="assets/partners/cosmic-bliss.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">cosmic bliss</span></span><span class="ptile" role="listitem" aria-label="plant therapy"><img src="assets/partners/plant-therapy.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">plant therapy</span></span></div></div><div class="prow rev"><div class="pgrp"><span class="ptile" role="listitem" aria-label="pure encapsulations"><img src="assets/partners/pure-encapsulations.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">pure encapsulations</span></span><span class="ptile" role="listitem" aria-label="mixsoon"><img src="assets/partners/mixsoon.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">mixsoon</span></span><span class="ptile" role="listitem" aria-label="calgee"><img src="assets/partners/calgee.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">calgee</span></span><span class="ptile" role="listitem" aria-label="chlorophyll water"><img src="assets/partners/chlorophyll-water.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">chlorophyll water</span></span><span class="ptile" role="listitem" aria-label="naked sundays"><img src="assets/partners/naked-sundays.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">naked sundays</span></span><span class="ptile" role="listitem" aria-label="physician’s choice"><img src="assets/partners/physicians-choice.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">physician&#8217;s choice</span></span><span class="ptile" role="listitem" aria-label="activist skincare"><img src="assets/partners/activist-skincare.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">activist skincare</span></span><span class="ptile" role="listitem" aria-label="better alt"><img src="assets/partners/better-alt.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">better alt</span></span><span class="ptile" role="listitem" aria-label="simple modern"><img src="assets/partners/simple-modern.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">simple modern</span></span><span class="ptile" role="listitem" aria-label="mary ruth’s"><img src="assets/partners/mary-ruths.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">mary ruth&#8217;s</span></span></div><div class="pgrp" aria-hidden="true"><span class="ptile" role="listitem" aria-label="pure encapsulations"><img src="assets/partners/pure-encapsulations.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">pure encapsulations</span></span><span class="ptile" role="listitem" aria-label="mixsoon"><img src="assets/partners/mixsoon.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">mixsoon</span></span><span class="ptile" role="listitem" aria-label="calgee"><img src="assets/partners/calgee.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">calgee</span></span><span class="ptile" role="listitem" aria-label="chlorophyll water"><img src="assets/partners/chlorophyll-water.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">chlorophyll water</span></span><span class="ptile" role="listitem" aria-label="naked sundays"><img src="assets/partners/naked-sundays.jpeg" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">naked sundays</span></span><span class="ptile" role="listitem" aria-label="physician’s choice"><img src="assets/partners/physicians-choice.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">physician&#8217;s choice</span></span><span class="ptile" role="listitem" aria-label="activist skincare"><img src="assets/partners/activist-skincare.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">activist skincare</span></span><span class="ptile" role="listitem" aria-label="better alt"><img src="assets/partners/better-alt.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">better alt</span></span><span class="ptile" role="listitem" aria-label="simple modern"><img src="assets/partners/simple-modern.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">simple modern</span></span><span class="ptile" role="listitem" aria-label="mary ruth’s"><img src="assets/partners/mary-ruths.png" alt="" width="44" height="44" loading="lazy" decoding="async"><span class="pn">mary ruth&#8217;s</span></span></div></div></div></div>
+    <p class="small reveal" style="margin-top:14px">…and the bar only gets gentler-but-firmer from here. 🐇</p>
+    <div class="hero-ctas reveal" style="margin-top:30px;justify-content:flex-start">
+      <button class="btn btn-primary btn-form" data-tally-open="OD9Ayp" data-tally-emoji-text="🐇" data-tally-emoji-animation="bounce" data-track="partner-form-collab">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.6" y="7" width="18.8" height="13.4" rx="2.6"/>
+          <path d="M3.4 8.4 12 14.3 20.6 8.4"/>
+          <path d="M19.4 1.6l.75 1.95 1.95.75-1.95.75-.75 1.95-.75-1.95-1.95-.75 1.95-.75z" fill="currentColor" stroke="none"/>
+        </svg>
+        start a partnership
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery">
+    <div class="reveal">
+      <span class="eyebrow">gallery</span>
+      <h2>the <em>soft</em> look</h2>
+      <p class="lead">airy, slightly-hazy light · pastel and iridescent surroundings · one calm subject per frame. the camera savors — it doesn't inventory.</p>
+    </div>
+    <h3 class="gal-sub reveal"><span class="n">the plates</span> — cooked, styled &amp; shot by me</h3>
+    <div class="plates reveal" aria-label="Dishes cooked, styled and photographed by the soft bunny">
+      <div class="pl big"><img src="assets/gastronomy/gastro-15.webp" alt="avocado roses with hemp seeds on toast" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-10.webp" alt="tteokbokki with scallions in a gentle red broth" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-19.webp" alt="sliced strawberries with pepitas and sesame" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-09.webp" alt="cucumber salad in a patterned bowl" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-02.webp" alt="vegan cà ri with potatoes" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-17.webp" alt="salad with pomegranate, radish and cucumber" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-05.webp" alt="veggie hand roll, up close" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-07.webp" alt="matcha layer cake slice" loading="lazy" decoding="async"></div>
+      <div class="pl big"><img src="assets/gastronomy/gastro-22.webp" alt="steaming noodle soup with tofu and fresh herbs" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-03.webp" alt="carrot lox bagels with cucumber and hemp seeds" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-13.webp" alt="matcha latte and brussels sprouts" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-25.webp" alt="little bites with a chili dipping sauce" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-01.webp" alt="crispy bánh xèo halves" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-20.webp" alt="tomato, avocado and cucumber with sesame dressing" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-11.webp" alt="tomato tofu ragù chay with baguette" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-06.webp" alt="noodles with bean sprouts and lime" loading="lazy" decoding="async"></div>
+      <div class="pl big"><img src="assets/gastronomy/gastro-08.webp" alt="vegan coffee layer cake on a patterned plate" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-14.webp" alt="chopped rainbow salad with herbs" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-04.webp" alt="tomato and zucchini salad plate" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-23.webp" alt="three veggie tacos on a patterned plate" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-27.webp" alt="rainbow rice bowl with peppers and cucumber" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-16.webp" alt="avocado rose toast, up close" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-24.webp" alt="rice noodle bowl with lime" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-18.webp" alt="creamy pasta bowl" loading="lazy" decoding="async"></div>
+      <div class="pl big"><img src="assets/gastronomy/gastro-26.webp" alt="a shared spread — bowls, fries and salsa" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-21.webp" alt="noodle bowl with fresh vegetables" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-12.webp" alt="tomato, cucumber and radish salad" loading="lazy" decoding="async"></div>
+      <div class="pl"><img src="assets/gastronomy/gastro-28.webp" alt="noodle bowl with bok choy and crispy shallots" loading="lazy" decoding="async"></div>
+    </div>
+    <h3 class="gal-sub reveal"><span class="n">the grid</span> — as it actually looks</h3>
+    <div class="feedshots reveal" aria-label="The Instagram grid, as it actually looks">
+      <a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="feedshot-1">
+        <img src="assets/feed/feed-5.jpg" alt="Instagram grid — pinned day-in-the-life posts, vegan bowls, Saigon nights and Edinburgh streets" width="1600" height="1067" loading="lazy" decoding="async">
+        <span class="veil" aria-hidden="true"></span>
+        <span class="cap"><span class="s">pinned</span><span class="t">day in the life — edinburgh &amp; socal, side by side</span></span>
+        <span class="peek" aria-hidden="true">view on instagram ✦</span>
+      </a>
+      <a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="feedshot-2">
+        <img src="assets/feed/feed-4.jpg" alt="Instagram grid — pastel soft bunny cover, vegan soft serve, açaí bowls and Orange County finds" width="1600" height="1064" loading="lazy" decoding="async">
+        <span class="veil" aria-hidden="true"></span>
+        <span class="cap"><span class="s">orange county</span><span class="t">soft serve, açaí, and huntington beach mornings</span></span>
+        <span class="peek" aria-hidden="true">view on instagram ✦</span>
+      </a>
+      <a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="feedshot-3">
+        <img src="assets/feed/feed-3.jpg" alt="Instagram grid — apple tart, phở, smoothies, snacks and gentle pantry staples" width="1600" height="1066" loading="lazy" decoding="async">
+        <span class="veil" aria-hidden="true"></span>
+        <span class="cap"><span class="s">the gentle pantry</span><span class="t">apple tart, phở, and one beautiful thing at a time</span></span>
+        <span class="peek" aria-hidden="true">view on instagram ✦</span>
+      </a>
+      <a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="feedshot-4">
+        <img src="assets/feed/feed-2.jpg" alt="Instagram grid — Edinburgh finds: M&S hauls, phở cafe, matcha and the Royal Botanic Garden" width="1600" height="1065" loading="lazy" decoding="async">
+        <span class="veil" aria-hidden="true"></span>
+        <span class="cap"><span class="s">edinburgh</span><span class="t">m&amp;s hauls, phở cafe, and the botanic garden</span></span>
+        <span class="peek" aria-hidden="true">view on instagram ✦</span>
+      </a>
+      <a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="feedshot-5">
+        <img src="assets/feed/feed-1.jpg" alt="Instagram grid — Edinburgh library crawl, Christmas market, kimchi, pastries and winter light" width="1600" height="1062" loading="lazy" decoding="async">
+        <span class="veil" aria-hidden="true"></span>
+        <span class="cap"><span class="s">edinburgh, in winter</span><span class="t">library crawls &amp; christmas-market light</span></span>
+        <span class="peek" aria-hidden="true">view on instagram ✦</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= CONNECT ================= -->
+  <section id="connect" class="connect">
+    <div class="reveal">
+      <div class="mk-wrap">
+        <svg class="mk" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <path d="M49,42 C46,32 47,20 50,15 C53,20 53,33 52,42 Z" fill="var(--pink)" opacity=".85"/>
+          <path d="M71,42 C74,32 73,20 70,15 C67,20 67,33 68,42 Z" fill="var(--pink)" opacity=".85"/>
+          <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M48,52 C40,38 40,18 49,9 C57,15 58,36 55,51"/>
+            <path d="M72,52 C80,38 80,18 71,9 C63,15 62,36 65,51"/>
+            <ellipse cx="60" cy="74" rx="27" ry="23"/>
+            <path d="M46,72 q4,4.5 8,0"/><path d="M66,72 q4,4.5 8,0"/>
+            <path d="M56,80 q2,2.5 4,0 q2,2.5 4,0" stroke-width="2.4"/>
+          </g>
+          <circle cx="41" cy="80" r="4.5" fill="var(--pink)" opacity=".8"/>
+          <circle cx="79" cy="80" r="4.5" fill="var(--pink)" opacity=".8"/>
+          <path d="M98 22 l1.7 4.4 4.4 1.7 -4.4 1.7 -1.7 4.4 -1.7 -4.4 -4.4 -1.7 4.4 -1.7 z" fill="var(--pink)"/>
+        </svg>
+      </div>
+      <h2>let's set a <em>soft</em> table</h2>
+      <p class="lead">brand partnerships, ugc, guide placements — or just to say the bún was beautiful. i read everything. 🐇</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary btn-form" data-tally-open="OD9Ayp" data-tally-emoji-text="🐇" data-tally-emoji-animation="bounce" data-track="partner-form-connect">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2.6" y="7" width="18.8" height="13.4" rx="2.6"/>
+            <path d="M3.4 8.4 12 14.3 20.6 8.4"/>
+            <path d="M19.4 1.6l.75 1.95 1.95.75-1.95.75-.75 1.95-.75-1.95-1.95-.75 1.95-.75z" fill="currentColor" stroke="none"/>
+          </svg>
+          work with me
+        </button>
+        <a class="btn btn-ghost" href="mailto:TheSoftBunnyxx@gmail.com?subject=partnership%20with%20the%20soft%20bunny%20xx" data-track="email">email instead</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener">dm on instagram</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener">instagram</a>
+        <a href="https://www.tiktok.com/@thesoftbunnyxx" target="_blank" rel="noopener">tiktok</a>
+        <a href="https://www.youtube.com/@thesoftbunnyxx" target="_blank" rel="noopener">youtube</a>
+        <a href="https://www.pinterest.com/thesoftbunnyxx/" target="_blank" rel="noopener">pinterest</a>
+        <a href="https://beacons.ai/thesoftbunnyxx" target="_blank" rel="noopener">beacons</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>the soft bunny xx · sài gòn ↔ orange county · <a href="mailto:TheSoftBunnyxx@gmail.com">thesoftbunnyxx@gmail.com</a> · ✦ ✦</footer>
+
+<script>
+(function(){
+  // display controls — same keys and behavior as /links ("auto" = key absent)
+  var root=document.documentElement, ls=null;
+  try{ls=window.localStorage}catch(e){}
+  function lget(k){try{return ls&&ls.getItem(k)}catch(e){return null}}
+  function lset(k,v){try{if(!ls)return; v===null?ls.removeItem(k):ls.setItem(k,v)}catch(e){}}
+  var themeBtns=[].slice.call(document.querySelectorAll('[data-theme]'));
+  var themeFab=document.getElementById('themeFab');
+  var themeMode='auto';
+  var FAB_ICON={auto:'◑',light:'☀',dark:'☾',mono:'◐'};
+  function applyTheme(mode){
+    themeMode=mode;
+    var dark = mode==='dark' || (mode==='auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+    root.classList.toggle('dark',mode!=='mono'&&dark);
+    root.classList.toggle('mono',mode==='mono');
+    lset('sb-site-theme', mode==='auto'?null:mode);
+    themeBtns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.theme===mode));});
+    themeFab.textContent=FAB_ICON[mode]||'◑';
+  }
+  themeBtns.forEach(function(b){b.addEventListener('click',function(){applyTheme(b.dataset.theme);});});
+  themeFab.addEventListener('click',function(){
+    var order=['light','dark','mono'];
+    applyTheme(order[(order.indexOf(themeMode)+1)%order.length]);
+  });
+  var sizeBtns=[].slice.call(document.querySelectorAll('[data-size]'));
+  function applySize(sz){
+    root.classList.remove('ts-lg','ts-xl');
+    if(sz==='lg')root.classList.add('ts-lg');
+    if(sz==='xl')root.classList.add('ts-xl');
+    lset('sb-textsize', sz==='md'?null:sz);
+    sizeBtns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.size===sz));});
+  }
+  sizeBtns.forEach(function(b){b.addEventListener('click',function(){applySize(b.dataset.size);});});
+  var motionBtn=document.getElementById('motionBtn');
+  function motionSync(){
+    var on=root.classList.contains('rm');
+    motionBtn.setAttribute('aria-pressed',String(on));
+    motionBtn.textContent=on?'on':'off';
+  }
+  motionBtn.addEventListener('click',function(){
+    root.classList.toggle('rm');
+    lset('sb-motion', root.classList.contains('rm')?'1':null);
+    motionSync();
+  });
+  var setFab=document.getElementById('setFab'),panel=document.getElementById('panel');
+  function openPanel(o){panel.classList.toggle('open',o);setFab.setAttribute('aria-expanded',String(o));}
+  setFab.addEventListener('click',function(){openPanel(!panel.classList.contains('open'));});
+  document.getElementById('setClose').addEventListener('click',function(){openPanel(false);setFab.focus();});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&panel.classList.contains('open')){openPanel(false);setFab.focus();}
+  });
+  document.addEventListener('click',function(e){
+    if(panel.classList.contains('open')&&!panel.contains(e.target)&&!setFab.contains(e.target)&&!e.target.closest('.fabs'))openPanel(false);
+  });
+  applyTheme(lget('sb-site-theme')||'auto');
+  applySize(lget('sb-textsize')||'md');
+  motionSync();
+
+  // section indicator — exactly one section is current at any scroll position
+  var links=[].slice.call(document.querySelectorAll('.si a'));
+  var secs=links.map(function(a){return document.getElementById(a.dataset.s)}).filter(Boolean);
+  var cur='';
+  function setOn(id){
+    if(id===cur)return;
+    cur=id;
+    links.forEach(function(a){a.classList.toggle('on',a.dataset.s===id)});
+  }
+  function spy(){
+    if(!secs.length)return;
+    var doc=document.documentElement;
+    // at the very bottom the last section can never reach the marker line
+    if(window.scrollY+window.innerHeight>=doc.scrollHeight-2){setOn(secs[secs.length-1].id);return;}
+    var line=window.innerHeight*.4,id=secs[0].id;
+    secs.forEach(function(el){if(el.getBoundingClientRect().top<=line)id=el.id});
+    setOn(id);
+  }
+  var queued=false;
+  function onScroll(){
+    if(queued)return;
+    queued=true;
+    requestAnimationFrame(function(){queued=false;spy()});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  // the browser's jump to a #hash can land after this script runs
+  window.addEventListener('load',onScroll);
+  window.addEventListener('hashchange',onScroll);
+  spy();
+
+  // click tracking — no-op until an analytics script (plausible / goatcounter) is added
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-track]'); if(!a)return;
+    var name=a.getAttribute('data-track');
+    try{
+      if(window.plausible)window.plausible('link',{props:{target:name}});
+      if(window.goatcounter&&window.goatcounter.count)
+        window.goatcounter.count({path:'link/'+name,title:name,event:true});
+    }catch(_){}
+  },{passive:true});
+
+  // tally popup fallback — if the widget is blocked, still get people to the form
+  document.querySelectorAll('[data-tally-open]').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(typeof Tally==='undefined')
+        window.open('https://tally.so/r/'+b.dataset.tallyOpen,'_blank','noopener');
+    });
+  });
+
+  // scroll reveal
+  var rev=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rev.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){rev.observe(el)});
+})();
+</script>
+</body>
+</html>
