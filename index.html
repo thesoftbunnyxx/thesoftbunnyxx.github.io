@@ -394,6 +394,21 @@ html.mono .plates .pl img{filter:grayscale(1)}
 @media(prefers-reduced-motion:reduce){.plates .pl img{transition:none}.plates .pl:hover img{transform:none}}
 html.rm .plates .pl:hover img{transform:none}
 .gal-sub{margin-top:44px;font-weight:400;font-size:clamp(1.05rem,2.3vw,1.3rem)}
+/* the brand work — tall story-format tiles of example public relations */
+.prshots{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+.prshots .pr{position:relative;aspect-ratio:9/16;border-radius:1rem;overflow:hidden;
+  border:1px solid var(--surface-border);box-shadow:var(--frame-halo);
+  transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s}
+.prshots .pr:hover{transform:translateY(-4px);
+  box-shadow:0 26px 56px -34px rgba(150,110,160,.55),0 0 22px rgba(249,198,229,.32)}
+.prshots .pr img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.1s cubic-bezier(.22,1,.36,1)}
+.prshots .pr:hover img{transform:scale(1.05)}
+html.mono .prshots .pr img{filter:grayscale(1)}
+@media(max-width:860px){.prshots{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.prshots{grid-template-columns:repeat(2,1fr);gap:10px}}
+@media(prefers-reduced-motion:reduce){.prshots .pr img{transition:none}.prshots .pr:hover img{transform:none}}
+html.rm .prshots .pr:hover img{transform:none}
 .gal-sub .n{font-family:var(--font-script);color:#c470ae;font-size:1.5em;line-height:0;margin-right:.25rem}
 html.dark .gal-sub .n{color:#e2a8d2}
 /* feed screenshots — the grid itself, framed like keepsakes */
@@ -770,6 +785,18 @@ footer a:hover{color:var(--accent)}
         <span class="cap"><span class="s">edinburgh, in winter</span><span class="t">library crawls &amp; christmas-market light</span></span>
         <span class="peek" aria-hidden="true">view on instagram ✦</span>
       </a>
+    </div>
+    <h3 class="gal-sub reveal"><span class="n">the brand work</span> — example public relations, shot &amp; styled by me</h3>
+    <div class="prshots reveal" aria-label="Example public relations — stories and posts created for partner brands">
+      <div class="pr"><img src="assets/pr/mixsoon.jpg" alt="story for mixsoon — bean trio skincare set, boxes in sparkling light" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/aura-bora-magnolia-bakery.jpg" alt="story for aura bora × magnolia bakery — apple cinnamon sparkling water with an urth caffé moment" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/joi.jpg" alt="story for joi plant milk" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/naked-sundays.jpg" alt="story for naked sundays spf" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/plant-therapy.jpg" alt="story for plant therapy" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/activist-skincare.jpg" alt="story for activist skincare" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/calgee.jpg" alt="story for calgee vegan omega-3" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/aura-bora.jpg" alt="story for aura bora sparkling water" loading="lazy" decoding="async"></div>
+      <div class="pr"><img src="assets/pr/ikago-tech.jpg" alt="story for ikago tech" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
