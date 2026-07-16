@@ -322,6 +322,10 @@ button.btn{appearance:none;-webkit-appearance:none}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:860px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.g2{grid-template-columns:1fr}}
+.paysafe{margin:.7rem 0 0;padding-left:1.1rem;list-style:none}
+.paysafe li{position:relative;margin:.6rem 0;font-size:.86rem;line-height:1.65;color:var(--text-secondary)}
+.paysafe li::before{content:'🐇';position:absolute;left:-1.3rem;font-size:.8rem}
 @media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
 .card{position:relative;background:var(--surface);border:1px solid var(--surface-border);
   border-radius:var(--card-radius);padding:24px;box-shadow:var(--frame-halo);
@@ -536,6 +540,8 @@ footer a:hover{color:var(--accent)}
   <a href="#content"  data-s="content"><span class="lb">content</span><span class="dt"></span></a>
   <a href="#approach" data-s="approach"><span class="lb">approach</span><span class="dt"></span></a>
   <a href="#collab"   data-s="collab"><span class="lb">collab</span><span class="dt"></span></a>
+  <a href="#services" data-s="services"><span class="lb">services</span><span class="dt"></span></a>
+  <a href="#pay"      data-s="pay"><span class="lb">pay</span><span class="dt"></span></a>
   <a href="#gallery"  data-s="gallery"><span class="lb">gallery</span><span class="dt"></span></a>
   <a href="#connect"  data-s="connect"><span class="lb">connect</span><span class="dt"></span></a>
 </nav>
@@ -661,7 +667,7 @@ footer a:hover{color:var(--accent)}
       <div class="card svc">
         <span class="pill">for your channels</span>
         <h3 style="margin-top:.8rem">ugc &amp; food styling</h3>
-        <p class="small">dreamy product and dish content shot for your own feed and ads — no posting on mine required. styled, edited, delivered ready to publish.</p>
+        <p class="small">dreamy product and dish content shot for your own feed and ads — no posting on mine required. styled, edited, delivered ready to publish. need a full dish or menu built around your product? that's the studio, just below.</p>
         <!-- EDIT ME: set your real rate -->
         <div class="price">from $150 · a set of 3 styled photos + 1 short clip</div>
       </div>
@@ -712,6 +718,90 @@ footer a:hover{color:var(--accent)}
         </svg>
         start a partnership
       </button>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services">
+    <div class="reveal">
+      <span class="eyebrow">services</span>
+      <h2>hire me <em>directly</em></h2>
+      <p class="lead">two doors — one for the brands and cafés who need beautiful, believable plant-based content, one for the people quietly building a gentler, plant-based life of their own.</p>
+    </div>
+    <div class="grid g2 reveal" style="margin-top:26px">
+      <div class="card svc">
+        <span class="pill">for brands &amp; cafés</span>
+        <h3 style="margin-top:.8rem">the soft table studio</h3>
+        <p class="small">a plant-based dish or menu built <em>around</em> your café or product — developed, styled, shot, and handed back ready to publish, with one saveable one-page guide your customers keep. the same eye big brands hire, sized for a single café or a small pantry line. (shooting your product just as it arrives? that's ugc &amp; food styling, in collab above.)</p>
+        <p class="small">on-site in sài gòn through this summer, then orange county's little saigon from august — pantry brands can book from anywhere; your product ships to me.</p>
+        <!-- EDIT ME: set your real rate -->
+        <div class="price">from $180 · a styled set + one guide</div>
+        <p class="small">delivered within an agreed window · one gentle round of refinements included · usage licensed on our one clear page</p>
+      </div>
+      <div class="card svc">
+        <span class="pill">for you</span>
+        <h3 style="margin-top:.8rem">a gentle pantry, made for you</h3>
+        <p class="small">a plant-based life mapped to your kitchen — your city, your budget, your allergens (soy-free, gluten-free, whatever's yours). you get a personal one-page pantry &amp; swaps guide, built from a life i actually live in two cities.</p>
+        <p class="small">want a taste first? comment on any post and the free mini-map arrives in your dms — that's the appetizer. and gently: i'm a fellow eater, not a dietitian — for anything medical, your clinician leads and i follow.</p>
+        <!-- EDIT ME: set your real rate -->
+        <div class="price">from $45 · a made-for-you guide</div>
+        <p class="small">delivered within a week of our chat · one gentle round of tweaks included</p>
+      </div>
+    </div>
+    <h3 class="reveal" style="margin-top:34px">how a booking works</h3>
+    <ol class="steps reveal">
+      <li><strong>say what you need</strong> — a dm or the form below; tell me whether it's for your brand or just for you, and a rough timeline.</li>
+      <li><strong>we agree the table</strong> — scope, deliverables, and date on one clear page. studio bookings hold with a 50% deposit; a personal guide is simply paid up front. nothing starts before you've approved it — and because every booking is made just for you (dates held, ingredients sourced, pages written), payments are final once i begin.</li>
+      <li><strong>i make it beautiful</strong> — i cook, style, shoot, or write, and share progress along the way so there are no surprises.</li>
+      <li><strong>settle &amp; receive</strong> — previews flow while i work; once the balance settles, your final files or guide arrive — yours to keep and use.</li>
+    </ol>
+    <div class="hero-ctas reveal" style="margin-top:30px;justify-content:flex-start">
+      <button class="btn btn-primary btn-form" data-tally-open="OD9Ayp" data-tally-emoji-text="🐇" data-tally-emoji-animation="bounce" data-track="book-form-services">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.6" y="7" width="18.8" height="13.4" rx="2.6"/>
+          <path d="M3.4 8.4 12 14.3 20.6 8.4"/>
+          <path d="M19.4 1.6l.75 1.95 1.95.75-1.95.75-.75 1.95-.75-1.95-1.95-.75 1.95-.75z" fill="currentColor" stroke="none"/>
+        </svg>
+        book the table
+      </button>
+      <a class="btn btn-ghost" href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener" data-track="dm-personal-guide">dm for a personal guide</a>
+    </div>
+  </section>
+
+  <!-- ================= PAY ================= -->
+  <section id="pay">
+    <div class="reveal">
+      <span class="eyebrow">payment</span>
+      <h2>how you <em>pay</em></h2>
+      <p class="lead">simple, safe, and the same whether you're a brand across the pacific or a reader around the corner. you always know the number before you pay it.</p>
+    </div>
+    <div class="grid g3 reveal" style="margin-top:26px">
+      <div class="card svc">
+        <span class="pill">recommended</span>
+        <h3 style="margin-top:.8rem">wise</h3>
+        <p class="small">the kindest exchange rate and lowest fees for anything crossing borders. i can receive as a local in usd, gbp, or eur — so your bank treats it like a transfer down the street.</p>
+      </div>
+      <div class="card svc">
+        <span class="pill">most familiar</span>
+        <h3 style="margin-top:.8rem">paypal</h3>
+        <p class="small">choose <strong>goods &amp; services</strong> and you're covered by paypal's buyer protection. easiest if you'd rather not set anything new up.</p>
+      </div>
+      <div class="card svc">
+        <span class="pill">guides &amp; downloads</span>
+        <h3 style="margin-top:.8rem">card, via gumroad</h3>
+        <p class="small">the soft bunny table guide and any ready-made download will check out by card on gumroad's own secure page when the guide opens — tax handled, the file delivered the moment you pay.</p>
+      </div>
+    </div>
+    <p class="small reveal" style="margin-top:16px">a little tip jar (<strong>ko-fi</strong>, in my link-in-bio) if a post ever helped you — never expected, always appreciated. <strong>bank transfer</strong> and <strong>usdc</strong> are available on request if the options above don't reach your country easily.</p>
+
+    <div class="card reveal" style="margin-top:26px">
+      <span class="pill">peace of mind</span>
+      <h3 style="margin-top:.8rem">how your payment link reaches you</h3>
+      <ul class="paysafe">
+        <li>your link or details <strong>always arrive inside the conversation we're already having</strong> — the same dm or email thread where we agreed the work. never from a new or unfamiliar account.</li>
+        <li>i only ever ask for payment as <strong>@thesoftbunnyxx</strong> on instagram &amp; tiktok, or from <strong>TheSoftBunnyxx@gmail.com</strong> — a payment request from anywhere else is an impostor, no matter how convincing.</li>
+        <li>i'll <strong>never ask for card numbers, codes, or passwords</strong> in a message — every payment runs on the provider's own secure page.</li>
+      </ul>
     </div>
   </section>
 
