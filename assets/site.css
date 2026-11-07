@@ -1939,3 +1939,20 @@ html.dark .header { box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 12px 32px -
 @media print { .header { position:static; box-shadow:none; backdrop-filter:none } }
 @media(max-width:900px) { .hero::before { inset:0 -20px 0 } }
 body { overflow-x:clip }
+
+/* ===== Side panel: sized to its content + "down the bunny hole" easter egg ===== */
+.sb-drawer { bottom:auto; max-height:calc(100dvh - 24px); gap:22px }
+.sb-drawer-foot { margin-top:0 }
+.sb-hole { padding-top:20px; border-top:1px solid var(--line) }
+.sb-hole-title { font-size:.62rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:10px }
+.sb-hole-card { position:relative; padding:16px 16px 14px; border-radius:18px; background:linear-gradient(color-mix(in srgb,var(--lilac) 70%,var(--surface)),color-mix(in srgb,var(--lilac) 70%,var(--surface))) padding-box,var(--aurora) border-box; border:1px solid transparent; min-height:132px; display:flex; flex-direction:column; gap:8px }
+.sb-hole-kind { align-self:flex-start; font-size:.58rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); padding:3px 9px; border-radius:999px; background:var(--surface) }
+.sb-hole-text { font:300 .92rem/1.6 var(--display); color:var(--ink) }
+.sb-hole-link { margin-top:auto; font-size:.7rem; color:var(--accent); text-decoration:underline; text-underline-offset:3px }
+.sb-hole-next { margin-top:10px; display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink); font-size:.72rem; cursor:pointer; transition:border-color .25s,color .25s,box-shadow .25s }
+.sb-hole-next:hover { color:var(--accent); border-color:#dcc4f4; box-shadow:0 6px 16px -10px rgba(170,77,143,.5) }
+.sb-hole-next span { display:inline-block; transition:transform .5s var(--ease) }
+.sb-hole-next:hover span { transform:rotate(180deg) }
+.sb-hole-card.hop { animation:hole-hop .5s var(--ease) }
+@keyframes hole-hop { 0% { opacity:0; transform:translateY(8px) } 60% { opacity:1; transform:translateY(-2px) } 100% { transform:none } }
+@media(prefers-reduced-motion:reduce) { .sb-hole-card.hop { animation:none } }

@@ -68,7 +68,16 @@
       ${seg('sb-theme', 'Appearance', 'set.theme', [['auto', 'Auto', 'th.auto'], ['light', 'Light', 'th.light'], ['dark', 'Dark', 'th.dark'], ['mono', 'Contrast', 'th.mono']], prefs.theme())}
       ${seg('sb-size', 'Text size', 'set.text', [['md', 'A', '', 'a-md'], ['lg', 'A', '', 'a-lg'], ['xl', 'A', '', 'a-xl']], prefs.size())}
       <label class="sb-switch"><span data-i18n="set.motion">Reduce motion</span><input type="checkbox" role="switch" id="sb-motion"${prefs.motion() ? ' checked' : ''}><i aria-hidden="true"></i></label>
-      <p class="sb-drawer-foot">Saved on this device only.</p>
+      <section class="sb-hole" lang="en" dir="ltr" aria-labelledby="sb-hole-title">
+        <p class="sb-hole-title" id="sb-hole-title"><span aria-hidden="true">🐇</span> down the bunny hole</p>
+        <div class="sb-hole-card" aria-live="polite">
+          <span class="sb-hole-kind"></span>
+          <p class="sb-hole-text"></p>
+          <a class="sb-hole-link" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <button type="button" class="sb-hole-next">another one <span aria-hidden="true">↻</span></button>
+      </section>
+      <p class="sb-drawer-foot">Display choices are saved on this device only.</p>
     </aside>`;
   document.body.append(dock, drawer);
 
@@ -106,7 +115,7 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') { closeDrawer(); closePop(); }
     if (e.key === 'Tab' && !drawer.hidden) {   // keep focus inside the open panel
-      const f = [...panel.querySelectorAll('button, input')];
+      const f = [...panel.querySelectorAll('button, input, a[href]')].filter(el => !el.hidden && el.offsetParent !== null);
       if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
       else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
     }
@@ -117,6 +126,76 @@
     if (t.name === 'sb-size') applySize(t.value);
     if (t.id === 'sb-motion') applyMotion(t.checked);
   });
+  /* ---------- easter egg: down the bunny hole ---------- */
+  const W = 'https://en.wikipedia.org/wiki/';
+  const FACTS = [
+    ['Bananas are berries, botanically speaking. Strawberries are not.', 'Banana'],
+    ['The little “seeds” on a strawberry are actually tiny fruits, each holding one seed.', 'Achene'],
+    ['Every cashew grows hanging beneath a juicy fruit called the cashew apple.', 'Cashew'],
+    ['A pineapple is lots of flowers that fused together into one fruit.', 'Pineapple'],
+    ['Peanuts aren’t nuts at all. They’re legumes, like peas and lentils, and ripen underground.', 'Peanut'],
+    ['Early cultivated carrots were purple and yellow. Orange carrots became popular much later.', 'Carrot'],
+    ['Vanilla comes from the fruit of an orchid, and each flower is often pollinated by hand.', 'Vanilla'],
+    ['Broccoli, kale, cabbage, cauliflower and Brussels sprouts are all one plant species.', 'Brassica_oleracea'],
+    ['Saffron is the hand-picked threads of a crocus flower, which is why it costs so much.', 'Saffron'],
+    ['In 1947 a US court ruled that rhubarb, a vegetable, counts as a fruit for import duties.', 'Rhubarb'],
+    ['In 1893 the US Supreme Court decided the tomato is a vegetable, for tax purposes at least.', 'Nix_v._Hedden'],
+    ['Durian smells so strong that it’s banned on Singapore’s trains.', 'Durian'],
+    ['Coffee “beans” are really the seeds of a small red fruit called a coffee cherry.', 'Coffee_bean'],
+    ['Chocolate begins as seeds inside a cacao pod, wrapped in sweet, fruity pulp.', 'Cocoa_bean'],
+    ['Quinoa is a cousin of spinach and beets, not a true grain.', 'Quinoa'],
+    ['Jackfruit is the largest fruit that grows on a tree. One can weigh as much as 55 kg.', 'Jackfruit'],
+    ['Most “wasabi” outside Japan is horseradish and mustard, coloured green.', 'Wasabi'],
+    ['An avocado is a big berry with a single seed.', 'Avocado'],
+    ['Mangosteen is often called the queen of fruits in Southeast Asia.', 'Mangosteen'],
+    ['Dragon fruit grows on a cactus, and its flowers bloom for only one night.', 'Dragon_fruit'],
+  ];
+  const DISHES = [
+    ['Koshary, Egypt’s much-loved street food: lentils, rice and pasta under tomato sauce and crispy onions.', 'Koshary'],
+    ['Gỏi cuốn chay: fresh rice-paper rolls full of herbs, a Sài Gòn favourite.', 'G%E1%BB%8Fi_cu%E1%BB%91n'],
+    ['Shōjin ryōri, Japan’s Buddhist temple cooking: seasonal, plant-based and beautifully simple.', 'Sh%C5%8Djin-ry%C5%8Dri'],
+    ['Ethiopian fasting dishes are fully plant-based: think red-lentil misir wot scooped up with injera.', 'Ethiopian_cuisine'],
+    ['Mujaddara: lentils and rice crowned with deeply caramelised onions, loved across the Levant.', 'Mujaddara'],
+    ['Ful medames: slow-cooked fava beans with olive oil, lemon and cumin, an Egyptian breakfast.', 'Ful_medames'],
+    ['Gallo pinto: rice and beans with onion, pepper and cilantro, breakfast in Costa Rica.', 'Gallo_pinto'],
+    ['Chana masala: chickpeas simmered in a spiced tomato and onion sauce, from North India.', 'Chana_masala'],
+    ['Falafel: crisp fritters of chickpeas or fava beans, herbs and spices.', 'Falafel'],
+    ['Ratatouille: a Provençal stew of summer vegetables, slow-cooked in olive oil.', 'Ratatouille'],
+    ['Aloo gobi: potatoes and cauliflower with turmeric and cumin, a North Indian staple.', 'Aloo_gobi'],
+  ];
+  const pick = a => a[Math.floor(Math.random() * a.length)];
+  const DINNER = {
+    main: ['crispy chickpeas', 'roasted cauliflower', 'lemongrass mushrooms', 'smoky black beans', 'red lentils', 'charred eggplant', 'roasted sweet potato'],
+    base: ['jasmine rice', 'rice noodles', 'warm flatbread', 'coconut rice', 'crispy roast potatoes', 'herby quinoa'],
+    sauce: ['tahini-lemon sauce', 'coconut curry', 'bright chimichurri', 'peanut-lime sauce', 'warm harissa', 'garlicky salsa verde'],
+    top: ['crispy shallots', 'pomegranate seeds', 'toasted sesame', 'a handful of fresh herbs', 'chili crisp', 'toasted peanuts'],
+  };
+  const deck = [
+    ...FACTS.map(([text, wiki]) => ({ kind: 'fun fact', text, wiki })),
+    ...DISHES.map(([text, wiki]) => ({ kind: 'around the world', text, wiki })),
+    ...Array.from({ length: 6 }, () => ({ kind: 'dinner idea' })),
+  ];
+  let order = [], last = null;
+  const nextCard = () => {
+    if (!order.length) order = deck.map((_, i) => i).sort(() => Math.random() - 0.5);
+    let item = deck[order.pop()];
+    if (item === last && order.length) item = deck[order.pop()];
+    last = item;
+    const card = drawer.querySelector('.sb-hole-card');
+    const link = card.querySelector('.sb-hole-link');
+    card.querySelector('.sb-hole-kind').textContent = item.kind;
+    if (item.kind === 'dinner idea') {
+      card.querySelector('.sb-hole-text').textContent = `Tonight: ${pick(DINNER.main)} over ${pick(DINNER.base)} with ${pick(DINNER.sauce)}, finished with ${pick(DINNER.top)}.`;
+      link.hidden = true;
+    } else {
+      card.querySelector('.sb-hole-text').textContent = item.text;
+      link.href = W + item.wiki; link.textContent = 'Follow the bunny on Wikipedia ↗'; link.hidden = false;
+    }
+    card.classList.remove('hop'); void card.offsetWidth; card.classList.add('hop');
+  };
+  drawer.querySelector('.sb-hole-next').addEventListener('click', nextCard);
+  settingsBtn.addEventListener('click', () => { if (!last) nextCard(); });
+
   dock.querySelector('.sb-copy').addEventListener('click', async () => {
     const status = dock.querySelector('.sb-copy-status');
     try { await navigator.clipboard.writeText(EMAIL); status.textContent = 'Copied ♡'; }
