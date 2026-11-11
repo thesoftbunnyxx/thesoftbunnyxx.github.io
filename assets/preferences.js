@@ -3,8 +3,8 @@
   try {
     var root = document.documentElement;
     var theme = localStorage.getItem('sb-site-theme');
+    if (theme === 'mono') { theme = null; localStorage.removeItem('sb-site-theme'); }
     root.classList.toggle('dark', theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches));
-    root.classList.toggle('mono', theme === 'mono');
     var size = localStorage.getItem('sb-textsize');
     if (size === 'lg' || size === 'xl') root.classList.add('ts-' + size);
     if (localStorage.getItem('sb-motion') === '1') root.classList.add('rm');

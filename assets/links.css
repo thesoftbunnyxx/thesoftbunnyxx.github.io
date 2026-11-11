@@ -1,10 +1,6 @@
 /* /links: the link-in-bio page. Loads after home.css and shares its tokens, arch, strip and story frames. */
 .lk { position:relative; width:min(520px,100% - 40px); margin-inline:auto; padding-bottom:40px; isolation:isolate }
-body.links { background:linear-gradient(180deg,var(--blush) 0,var(--paper) 620px) var(--paper) }
-.lk-light { position:absolute; z-index:-1; top:-40px; left:50%; width:min(760px,100vw); height:760px; translate:-50% 0; overflow:hidden; pointer-events:none }
-.lk-light i { position:absolute; left:50%; top:0; width:760px; height:760px; margin-left:-380px; border-radius:50%; background:radial-gradient(closest-side,rgba(249,198,229,.5),rgba(220,196,244,.32) 40%,rgba(181,205,249,.16) 64%,transparent 100%); animation:pool 7s ease-in-out infinite }
-html.dark .lk-light i { background:radial-gradient(closest-side,rgba(220,170,207,.18),rgba(188,171,221,.11) 42%,rgba(156,178,226,.05) 66%,transparent 100%) }
-html.mono .lk-light { display:none }
+body.links { background:var(--paper) }
 
 .lk-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px }
 .lk-bar .quiet { font-size:.66rem }
@@ -13,12 +9,6 @@ html.mono .lk-light { display:none }
 [dir=rtl] .language-control select { padding:9px 16px 9px 34px; background-position:left 13px center }
 
 .lk-intro { text-align:center; padding-top:34px }
-.lk-art { position:relative; width:148px; margin-inline:auto }
-.lk-art .arch { box-shadow:0 22px 40px -28px rgba(74,60,102,.5) }
-.lk-art .arch-line { inset:-10px -10px 0 }
-.lk-art .needle { position:absolute; left:50%; top:-17px; width:14px; height:14px; translate:-50% 0; color:var(--accent); animation:twinkle 5s ease-in-out infinite }
-.lk-intro .table-line { margin-bottom:34px }
-.lk-intro h1 { font-size:clamp(2.1rem,9vw,2.7rem); letter-spacing:-.04em; margin-bottom:14px }
 .lk-tag { color:var(--ink); font-size:.95rem }
 .lk-place { margin-top:2px; font:500 .62rem/1.6 var(--sans); letter-spacing:.22em; text-transform:uppercase; color:var(--muted) }
 .lk-proof { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 22px; margin-top:22px; font-size:.78rem; color:var(--muted) }
@@ -26,7 +16,7 @@ html.mono .lk-light { display:none }
 .lk-proof strong { font:200 italic 1.2rem/1 var(--serif); color:var(--ink); margin-inline-end:3px }
 
 /* the links themselves: large hairline rows */
-.lk-rows { margin-top:40px; border-top:1px solid var(--hair) }
+.lk-rows { margin-top:8px; border-top:1px solid var(--hair) }
 .lk-row { position:relative; display:flex; align-items:center; justify-content:space-between; gap:18px; min-height:84px; padding:18px 4px; border-bottom:1px solid var(--hair); text-decoration:none; color:var(--ink) }
 .lk-row::after { content:''; position:absolute; inset-inline-start:0; bottom:-1px; width:0; height:1px; background:var(--aurora); transition:width .7s var(--ease) }
 .lk-row:hover::after,.lk-row:focus-visible::after { width:100% }
@@ -60,3 +50,18 @@ html.mono .lk-light { display:none }
 /* Translated titles: Poppins has no Vietnamese or Cyrillic, so other languages use Montserrat Light throughout instead of mixing fonts mid-word. */
 html:not([lang=en]) .lk-row strong { font:300 1.3rem/1.3 var(--sans); letter-spacing:-.02em }
 html:not([lang=en]) .lk-row strong[lang=en] { font:200 1.5rem/1.25 var(--display); letter-spacing:-.03em }
+
+/* The living sky behind the top of the page, with the bunny logo in its orb. */
+.lk-sky { position:absolute; z-index:-1; top:0; left:50%; width:100vw; height:640px; translate:-50% 0; display:block;
+  -webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%); mask-image:linear-gradient(180deg,#000 80%,transparent 100%) }
+html.mono .lk-sky { display:none }
+.lk-intro { padding-top:54px; min-height:548px }
+.lk-logo { --s:clamp(24px,7.4vw,31px); display:flex }
+html:not(.mono) .lk-bar .quiet,html:not(.mono) .lk-tag,html:not(.mono) .lk-place,html:not(.mono) .lk-proof,html:not(.mono) .lk-proof strong { color:#fff }
+html:not(.mono) .lk-bar .quiet::after { background:rgba(255,255,255,.5) }
+html:not(.mono) .lk-intro :is(.lk-tag,.lk-place,.lk-proof) { text-shadow:0 1px 14px rgba(70,70,160,.45) }
+html:not(.mono) .language-control select { color:#fff; border-color:rgba(255,255,255,.55); background-color:rgba(255,255,255,.14); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23ffffff' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5'/%3E%3C/svg%3E") }
+.language-control select option { color:#3f3358 }
+.lk-tag { margin-top:26px }
+html.mono .lk-logo { color:#1f1f23 }
+html.mono .lk-logo .bf { fill:#1f1f23 } html.mono .lk-logo .hz { stroke:#1f1f23 } html.mono .lk-logo .buns { filter:none } html.mono .lk-logo .pl { display:none } html.mono .lk-logo { --xx:#1f1f23 }

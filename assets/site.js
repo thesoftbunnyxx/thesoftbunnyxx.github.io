@@ -17,13 +17,13 @@
 
   /* ---------- display preferences (same storage keys as before) ---------- */
   const prefs = {
-    theme: () => { const v = get('sb-site-theme'); return ['light', 'dark', 'mono'].includes(v) ? v : 'auto'; },
+    theme: () => { const v = get('sb-site-theme'); return ['light', 'dark'].includes(v) ? v : 'auto'; },
     size: () => { const v = get('sb-textsize'); return ['lg', 'xl'].includes(v) ? v : 'md'; },
     motion: () => root.classList.contains('rm'),
   };
   function applyTheme(v) {
     root.classList.toggle('dark', v === 'dark' || (v === 'auto' && scheme.matches));
-    root.classList.toggle('mono', v === 'mono');
+    root.classList.remove('mono');
     set('sb-site-theme', v === 'auto' ? null : v);
   }
   function applySize(v) {
@@ -65,7 +65,7 @@
     <aside class="sb-drawer" id="sb-settings" role="dialog" aria-modal="true" aria-labelledby="sb-settings-title" tabindex="-1">
       <div class="sb-drawer-head"><p id="sb-settings-title"><span aria-hidden="true">✧</span> <span data-i18n="set.title">display</span></p>
         <button type="button" class="sb-close" data-close aria-label="Close display settings">${ICON.close}</button></div>
-      ${seg('sb-theme', 'Appearance', 'set.theme', [['auto', 'Auto', 'th.auto'], ['light', 'Light', 'th.light'], ['dark', 'Dark', 'th.dark'], ['mono', 'Contrast', 'th.mono']], prefs.theme())}
+      ${seg('sb-theme', 'Appearance', 'set.theme', [['auto', 'Auto', 'th.auto'], ['light', 'Light', 'th.light'], ['dark', 'Dark', 'th.dark']], prefs.theme())}
       ${seg('sb-size', 'Text size', 'set.text', [['md', 'A', '', 'a-md'], ['lg', 'A', '', 'a-lg'], ['xl', 'A', '', 'a-xl']], prefs.size())}
       <label class="sb-switch"><span data-i18n="set.motion">Reduce motion</span><input type="checkbox" role="switch" id="sb-motion"${prefs.motion() ? ' checked' : ''}><i aria-hidden="true"></i></label>
       <section class="sb-hole" lang="en" dir="ltr" aria-labelledby="sb-hole-title">

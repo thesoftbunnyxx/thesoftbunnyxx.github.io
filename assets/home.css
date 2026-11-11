@@ -103,9 +103,12 @@ html.dark .btn { color:var(--button-ink); background:var(--aurora) }
 .top { position:sticky; top:0; z-index:35; transition:background .5s var(--ease),box-shadow .5s var(--ease),backdrop-filter .5s }
 html.scrolled .top { background:color-mix(in srgb,var(--paper) 82%,transparent); backdrop-filter:blur(16px) saturate(1.2); -webkit-backdrop-filter:blur(16px) saturate(1.2); box-shadow:0 1px 0 var(--hair) }
 .top-in { display:flex; align-items:center; justify-content:space-between; min-height:76px; gap:20px }
-.wordmark { display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font:300 1.06rem/1 var(--display); letter-spacing:-.02em }
-.wordmark i { font:300 italic 1.08em/1 var(--serif); color:var(--accent); letter-spacing:0 }
-.mark { width:34px; height:34px; color:var(--ink); flex:none }
+.wordmark { display:inline-flex; align-items:flex-end; gap:14px; text-decoration:none; color:var(--ink); font:300 .68rem/1 var(--sans); letter-spacing:.4em; text-transform:uppercase }
+.wordmark span { padding-bottom:3px; white-space:nowrap }
+.wordmark i { font:200 italic 1.4em/1 var(--serif); color:var(--accent); letter-spacing:.04em; text-transform:none }
+.mark { width:46px; height:32px; flex:none; overflow:visible; filter:drop-shadow(0 0 3px rgba(228,193,249,.9)) drop-shadow(0 0 9px rgba(169,222,249,.55)) }
+html.dark .mark { filter:drop-shadow(0 0 3px rgba(255,255,255,.8)) drop-shadow(0 0 10px rgba(196,182,255,.8)) }
+html.mono .mark { filter:drop-shadow(0 0 .6px #1f1f23) }
 .top nav { display:flex; align-items:center; gap:4px }
 .nav-link { position:relative; padding:10px 14px; font:500 .68rem/1 var(--sans); letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:var(--muted); transition:color .3s }
 .nav-link::after { content:''; position:absolute; left:50%; right:50%; bottom:4px; height:1px; background:var(--aurora); transition:left .45s var(--ease),right .45s var(--ease) }
@@ -283,6 +286,8 @@ html.reveal-ready .hero-art[data-r].in { transform:none }
 @media(max-width:900px) {
   :root { --wrap:calc(100% - 40px) }
   .top-in { min-height:64px }
+  .wordmark { letter-spacing:.3em; gap:10px; font-size:.62rem }
+  .mark { width:40px; height:28px }
   .nav-link { display:none }
   .hero-grid { grid-template-columns:1fr; gap:56px }
   .hero-copy { padding-bottom:0 }

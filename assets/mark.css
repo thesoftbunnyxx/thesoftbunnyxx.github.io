@@ -1,0 +1,86 @@
+/* the soft bunny xx · the light mark (v4)
+   Shared by the logo preview and the brand guidelines. Pair with mark.js, which draws the artwork.
+   Rule of the look: every edge is a crisp vector hairline; all softness lives in separate pools of light. */
+
+
+/* ---------- lockup ---------- */
+.sbx { display:inline-flex; flex-direction:column; align-items:center; font-size:var(--s,32px); line-height:1; color:#3f3358; --sub:#73678c; --xx:#a24a89 }
+.sbx-mark { display:block; width:8.6em; height:auto; overflow:visible }
+.sbx-wm { margin:.42em 0 0; white-space:nowrap; font-weight:400 }
+.sbx-tag { margin:1.25em 0 0; font:300 .26em/1 'Montserrat',sans-serif; letter-spacing:.38em; text-transform:uppercase; white-space:nowrap; color:var(--sub); padding-left:.38em }
+
+/* the wordmark: wide, very light capitals with a thin italic xx */
+.sbx-wm.b { font:250 .54em/1 'Montserrat',sans-serif; letter-spacing:.46em; text-transform:uppercase; padding-left:.46em; margin-top:1.3em }
+.sbx-wm.b i { font:200 italic 1.34em/1 'Noto Serif Display',serif; letter-spacing:.04em; text-transform:none; color:var(--xx) }
+/* C · all thin italic serif */
+.sbx-wm.c { font:200 italic 1.1em/1 'Noto Serif Display',serif; letter-spacing:-.01em; margin-top:.7em }
+.sbx-wm.c i { font:inherit }
+
+/* ---------- artwork ---------- */
+.sbx-mark .bo { fill:none; stroke:url(#sbx-rb-day); stroke-width:max(1px,calc(var(--s,32px) * .022)); stroke-linejoin:round }
+.sbx-mark .bg { fill:none; stroke:url(#sbx-rb-day); stroke-width:1.8; opacity:.4; filter:url(#sbx-halo) }
+.sbx-mark .bf { fill:#fff }
+.sbx-mark .hz { stroke:url(#sbx-hz-day); stroke-width:max(.8px,calc(var(--s,32px) * .016)); vector-effect:non-scaling-stroke; stroke-linecap:round }
+.sbx-mark .pl { fill:url(#sbx-pool-day) }
+.sbx-mark .st { fill:url(#sbx-star-day) }
+.sbx-mark .bd { fill:#c9a8f0 }
+.sbx-mark .buns { filter:drop-shadow(0 0 .1em rgba(228,193,249,.75)) drop-shadow(0 0 .34em rgba(169,222,249,.5)) }
+
+/* night: bunnies of white light, the rainbow thins to a pale rim */
+.sbx.night { color:#fff; --sub:rgba(255,255,255,.82); --xx:#fff }
+.sbx.night .bo,.sbx.night .bg { stroke:url(#sbx-rb-night) }
+.sbx.night .bg { opacity:.7 }
+.sbx.night .hz { stroke:url(#sbx-hz-night) }
+.sbx.night .pl { fill:url(#sbx-pool-night) }
+.sbx.night .st,.sbx.night .bd { fill:#fff }
+.sbx.night .buns { filter:drop-shadow(0 0 .08em #fff) drop-shadow(0 0 .3em rgba(255,255,255,.75)) drop-shadow(0 0 .8em rgba(196,182,255,.9)) }
+.sbx.night .sbx-wm { text-shadow:0 0 .5em rgba(255,190,228,.5),0 0 1.4em rgba(140,160,255,.75) }
+
+/* one colour: outline only, for stamps, print, embroidery */
+.sbx.ink .bo,.sbx.ink .hz { stroke:currentColor }
+.sbx.ink .bf { fill:none } .sbx.ink .pl,.sbx.ink .bg { display:none }
+.sbx.ink .st,.sbx.ink .bd { fill:currentColor }
+.sbx.ink .buns { filter:none }
+.sbx.ink { --xx:currentColor }
+
+/* horizontal */
+.sbx.row { flex-direction:row; align-items:center; gap:.5em }
+.sbx.row .sbx-mark { width:4.5em }
+.sbx.row .sbx-wm { margin:0 }
+.sbx.row .sbx-wm.b { margin:0 }
+
+/* ---------- gentle motion (only where .live is set) ---------- */
+.sbx.live .hz { transform-origin:75px 60px; animation:sbx-draw 2.4s cubic-bezier(.65,0,.2,1) .2s both }
+.sbx.live .buns { animation:sbx-fade 1.6s ease 1.5s both }
+.sbx.live .kit { animation:sbx-hop 11s ease-in-out 5s infinite }
+.sbx.live .pl { transform-box:fill-box; transform-origin:50% 50%; animation:sbx-fade 2s ease 1.2s both, sbx-breathe 7s ease-in-out 3s infinite }
+.sbx.live .st { animation:sbx-glint 5s ease-in-out infinite }
+.sbx.live .st:nth-of-type(2) { animation-delay:-1.8s } .sbx.live .st:nth-of-type(3) { animation-delay:-3.4s }
+.sbx.live .sbx-wm { animation:sbx-fade 2s ease 2.1s both }
+.sbx.live .sbx-tag { animation:sbx-fade 2s ease 2.6s both }
+@keyframes sbx-draw { from { transform:scaleX(0); opacity:0 } to { transform:scaleX(1); opacity:1 } }
+@keyframes sbx-fade { from { opacity:0 } }
+@keyframes sbx-breathe { 0%,100% { opacity:.7; transform:scale(.94) } 50% { opacity:1; transform:scale(1.05) } }
+@keyframes sbx-glint { 0%,100% { opacity:.3 } 50% { opacity:1 } }
+@keyframes sbx-hop { 0%,91%,100% { translate:0 0 } 93% { translate:0 -3px } 95% { translate:2px 0 } 97% { translate:2px -2px } 99% { translate:0 0 } }
+
+/* ---------- aurora stage ---------- */
+/* sky: pure white bunnies on the periwinkle-to-orchid sky */
+.sbx-stage.sky { background:
+  linear-gradient(118deg,transparent 16%,rgba(190,246,255,.42) 26%,rgba(255,255,255,.22) 31%,rgba(255,200,236,.2) 37%,transparent 48%),
+  radial-gradient(80% 70% at 50% 60%,rgba(255,255,255,.2),transparent 60%),
+  linear-gradient(165deg,#8fb3f4 0%,#8f9df0 38%,#b19cef 66%,#e3aee6 100%) }
+.sbx-stage.sky::after { content:''; position:absolute; inset:0; z-index:-1; opacity:.2; mix-blend-mode:soft-light;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E") }
+/* pure: no rim, no stars. Just the two bunnies and their line. */
+.sbx.pure .bo,.sbx.pure .bg,.sbx.pure .st,.sbx.pure .bd { display:none }
+
+.sbx-stage { position:relative; overflow:hidden; isolation:isolate; display:grid; place-items:center }
+.sbx-stage > .sbx-aurora { position:absolute; inset:0; width:100%; height:100%; z-index:-1 }
+.sbx-stage.day { background:linear-gradient(180deg,#fff 0%,#fffafd 55%,#f5f8ff 100%) }
+.sbx-stage.night { background:linear-gradient(180deg,#1d1c4a 0%,#34358a 42%,#6f70cf 78%,#b9a4ec 100%) }
+.sbx-aurora .twk { animation:sbx-glint 6s ease-in-out infinite }
+.sbx-aurora .veil { animation:sbx-veil 14s ease-in-out infinite alternate }
+.sbx-aurora .veil.b { animation-duration:19s; animation-direction:alternate-reverse }
+@keyframes sbx-veil { from { transform:translateX(-14px) } to { transform:translateX(14px) } }
+@media(prefers-reduced-motion:reduce) { .sbx *,.sbx-aurora * { animation:none !important } }
