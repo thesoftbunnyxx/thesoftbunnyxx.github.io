@@ -100,7 +100,15 @@ const linkLocales = {
       "c.collab_s": "phạm vi, quyền sử dụng và những giới hạn mình không vượt qua",
       "c.email_t": "email",
       "c.site_t": "ghé trang chính",
-      "guide.status": "Cẩm nang đang được phát triển. Chưa mở bán."
+      "guide.status": "Cẩm nang đang được phát triển. Chưa mở bán.",
+      "p.brands": "các thương hiệu mình từng hợp tác",
+      "p.note": "Các hợp tác và quà tặng trong quá khứ. Việc liệt kê một thương hiệu không có nghĩa là hiện tại chúng mình đang hợp tác.",
+      "p.work": "một số tác phẩm cho thương hiệu",
+      "p.std": "tiêu chuẩn của the soft bunny",
+      "p.s1": "100% thực vật. Mọi sản phẩm, mọi món ăn.",
+      "p.s2": "Luôn công khai. Mọi hợp tác đều được ghi rõ.",
+      "p.s3": "Chỉ những gì mình thật sự dùng, để lời giới thiệu có ý nghĩa.",
+      "p.s4": "Không văn hóa ăn kiêng, detox hay sản phẩm giảm cân."
     },
     "zh": {
       "set.title": "设置",
@@ -118,7 +126,15 @@ const linkLocales = {
       "c.collab_s": "范围、授权，以及我不会越过的界线",
       "c.email_t": "邮箱",
       "c.site_t": "访问完整网站",
-      "guide.status": "指南正在编写中，尚未开售。"
+      "guide.status": "指南正在编写中，尚未开售。",
+      "p.brands": "合作过的品牌",
+      "p.note": "过往合作及礼赠合作。列出品牌并不代表目前仍在合作。",
+      "p.work": "精选品牌作品",
+      "p.std": "the soft bunny 的标准",
+      "p.s1": "100% 纯植物。每件产品,每道菜。",
+      "p.s2": "始终公开。每次合作都会明确标注。",
+      "p.s3": "只推荐我自己会用的东西,推荐才有意义。",
+      "p.s4": "不碰节食文化、排毒或减肥产品。"
     },
     "es": {
       "set.title": "ajustes",
@@ -136,7 +152,15 @@ const linkLocales = {
       "c.collab_s": "alcance, uso y los límites que no cruzo",
       "c.email_t": "correo",
       "c.site_t": "visita el sitio completo",
-      "guide.status": "Guía en desarrollo. Aún no está a la venta."
+      "guide.status": "Guía en desarrollo. Aún no está a la venta.",
+      "p.brands": "marcas con las que he trabajado",
+      "p.note": "Colaboraciones pasadas y regalos. Que aparezca una marca no significa que estemos colaborando ahora.",
+      "p.work": "selección de trabajos con marcas",
+      "p.std": "el estándar de the soft bunny",
+      "p.s1": "100 % vegetal. Cada producto, cada plato.",
+      "p.s2": "Siempre declarado. Las colaboraciones se indican, todas las veces.",
+      "p.s3": "Solo cosas que usaría yo, para que la recomendación signifique algo.",
+      "p.s4": "Nada de cultura de la dieta, detox ni productos para adelgazar."
     },
     "ar": {
       "set.title": "الإعدادات",
@@ -154,7 +178,15 @@ const linkLocales = {
       "c.collab_s": "النطاق، وحقوق الاستخدام، والحدود التي لا أتجاوزها",
       "c.email_t": "البريد الإلكتروني",
       "c.site_t": "زر الموقع الكامل",
-      "guide.status": "الدليل قيد الإعداد. غير متاح للبيع بعد."
+      "guide.status": "الدليل قيد الإعداد. غير متاح للبيع بعد.",
+      "p.brands": "علامات تجارية تعاونتُ معها",
+      "p.note": "شراكات سابقة وتعاونات بهدايا. ذكر علامة تجارية لا يعني أننا نعمل معًا الآن.",
+      "p.work": "مختارات من أعمالي مع العلامات التجارية",
+      "p.std": "معيار the soft bunny",
+      "p.s1": "نباتي 100%. كل منتج، كل طبق.",
+      "p.s2": "إفصاح دائم. تُوسم الشراكات في كل مرة.",
+      "p.s3": "فقط ما أستخدمه بنفسي، ليكون للتوصية معنى.",
+      "p.s4": "لا لثقافة الحميات ولا منتجات التخلص من السموم أو إنقاص الوزن."
     },
     "fr": {
       "set.title": "réglages",
@@ -172,7 +204,15 @@ const linkLocales = {
       "c.collab_s": "périmètre, droits d'usage et les limites que je ne franchis pas",
       "c.email_t": "e-mail",
       "c.site_t": "voir le site complet",
-      "guide.status": "Guide en préparation. Pas encore en vente."
+      "guide.status": "Guide en préparation. Pas encore en vente.",
+      "p.brands": "les marques avec lesquelles j’ai travaillé",
+      "p.note": "Partenariats passés et collaborations offertes. La présence d’une marque ne signifie pas que nous travaillons ensemble actuellement.",
+      "p.work": "sélection de travaux pour des marques",
+      "p.std": "le standard the soft bunny",
+      "p.s1": "100 % végétal. Chaque produit, chaque assiette.",
+      "p.s2": "Toujours signalé. Les partenariats sont indiqués, à chaque fois.",
+      "p.s3": "Uniquement ce que j’utiliserais moi-même, pour que la recommandation ait du sens.",
+      "p.s4": "Pas de culture des régimes, de détox ni de produits minceur."
     },
     "pt": {
       "set.title": "definições",
@@ -190,7 +230,15 @@ const linkLocales = {
       "c.collab_s": "âmbito, uso e os limites que não ultrapasso",
       "c.email_t": "e-mail",
       "c.site_t": "visite o site completo",
-      "guide.status": "Guia em desenvolvimento. Ainda não está à venda."
+      "guide.status": "Guia em desenvolvimento. Ainda não está à venda.",
+      "p.brands": "marcas com quem já trabalhei",
+      "p.note": "Parcerias passadas e colaborações com presentes. Listar uma marca não significa que estamos trabalhando juntos agora.",
+      "p.work": "seleção de trabalhos com marcas",
+      "p.std": "o padrão the soft bunny",
+      "p.s1": "100% vegetal. Cada produto, cada prato.",
+      "p.s2": "Sempre declarado. As parcerias são sinalizadas, todas as vezes.",
+      "p.s3": "Só coisas que eu usaria, para que a recomendação tenha valor.",
+      "p.s4": "Nada de cultura da dieta, detox ou produtos para emagrecer."
     },
     "ru": {
       "set.title": "настройки",
@@ -208,7 +256,15 @@ const linkLocales = {
       "c.collab_s": "объём, права на использование и границы, которые я не перехожу",
       "c.email_t": "почта",
       "c.site_t": "открыть весь сайт",
-      "guide.status": "Руководство в разработке. Пока не продаётся."
+      "guide.status": "Руководство в разработке. Пока не продаётся.",
+      "p.brands": "бренды-партнёры",
+      "p.note": "Прошлые партнёрства и подарочные коллаборации. Упоминание бренда не означает, что мы сотрудничаем сейчас.",
+      "p.work": "избранные работы для брендов",
+      "p.std": "стандарт the soft bunny",
+      "p.s1": "100% растительное. Каждый продукт, каждое блюдо.",
+      "p.s2": "Всегда открыто. Партнёрские материалы всегда отмечены.",
+      "p.s3": "Только то, что я использую лично, чтобы рекомендация что-то значила.",
+      "p.s4": "Никакой культуры диет, детоксов и средств для похудения."
     },
     "ja": {
       "set.title": "設定",
@@ -226,7 +282,15 @@ const linkLocales = {
       "c.collab_s": "範囲、二次利用、そして越えない一線",
       "c.email_t": "メール",
       "c.site_t": "サイト全体を見る",
-      "guide.status": "ガイドは制作中です。まだ販売していません。"
+      "guide.status": "ガイドは制作中です。まだ販売していません。",
+      "p.brands": "これまでご一緒したブランド",
+      "p.note": "過去のパートナーシップおよびギフト提供によるコラボレーションです。掲載は現在の提携を意味するものではありません。",
+      "p.work": "ブランドワーク抜粋",
+      "p.std": "the soft bunny の基準",
+      "p.s1": "100%プラントベース。すべての商品、すべてのお皿。",
+      "p.s2": "必ず明示。パートナーシップは毎回表記します。",
+      "p.s3": "自分で使うものだけ。だからおすすめに意味があります。",
+      "p.s4": "ダイエット文化、デトックス、減量商品は扱いません。"
     },
     "de": {
       "set.title": "Einstellungen",
@@ -244,7 +308,15 @@ const linkLocales = {
       "c.collab_s": "Umfang, Nutzungsrechte und die Grenzen, die ich nicht überschreite",
       "c.email_t": "E-Mail",
       "c.site_t": "zur ganzen Website",
-      "guide.status": "Der Guide entsteht gerade. Noch nicht erhältlich."
+      "guide.status": "Der Guide entsteht gerade. Noch nicht erhältlich.",
+      "p.brands": "Marken, mit denen ich gearbeitet habe",
+      "p.note": "Frühere Partnerschaften und Kooperationen mit Geschenken. Eine Nennung bedeutet nicht, dass wir aktuell zusammenarbeiten.",
+      "p.work": "ausgewählte Markenarbeiten",
+      "p.std": "der soft-bunny-Standard",
+      "p.s1": "100 % pflanzlich. Jedes Produkt, jeder Teller.",
+      "p.s2": "Immer offengelegt. Partnerschaften werden jedes Mal gekennzeichnet.",
+      "p.s3": "Nur Dinge, die ich selbst benutzen würde, damit die Empfehlung etwas bedeutet.",
+      "p.s4": "Keine Diätkultur, kein Detox, keine Abnehmprodukte."
     },
     "ko": {
       "set.title": "설정",
@@ -262,7 +334,15 @@ const linkLocales = {
       "c.collab_s": "범위, 사용 권한, 그리고 넘지 않는 선",
       "c.email_t": "이메일",
       "c.site_t": "전체 사이트 보기",
-      "guide.status": "가이드를 준비하고 있어요. 아직 판매하지 않습니다."
+      "guide.status": "가이드를 준비하고 있어요. 아직 판매하지 않습니다.",
+      "p.brands": "함께한 브랜드",
+      "p.note": "과거 파트너십 및 제품 협찬 협업입니다. 브랜드가 표시되어 있어도 현재 협업 중이라는 뜻은 아닙니다.",
+      "p.work": "브랜드 작업 모음",
+      "p.std": "the soft bunny의 기준",
+      "p.s1": "100% 식물성. 모든 제품, 모든 접시.",
+      "p.s2": "항상 공개합니다. 파트너십은 매번 표시합니다.",
+      "p.s3": "제가 직접 쓸 만한 것만 추천해요. 그래야 추천에 의미가 있으니까요.",
+      "p.s4": "다이어트 문화, 디톡스, 체중 감량 제품은 다루지 않습니다."
     },
     "hi": {
       "set.title": "सेटिंग्स",
@@ -280,7 +360,15 @@ const linkLocales = {
       "c.collab_s": "दायरा, उपयोग के अधिकार, और वे सीमाएँ जो मैं नहीं लाँघती",
       "c.email_t": "ईमेल",
       "c.site_t": "पूरी साइट देखें",
-      "guide.status": "गाइड तैयार की जा रही है। अभी बिक्री के लिए उपलब्ध नहीं है।"
+      "guide.status": "गाइड तैयार की जा रही है। अभी बिक्री के लिए उपलब्ध नहीं है।",
+      "p.brands": "जिन ब्रांड्स के साथ मैंने काम किया है",
+      "p.note": "पिछली साझेदारियाँ और उपहार-आधारित सहयोग। किसी ब्रांड के यहाँ होने का मतलब यह नहीं कि हम अभी साथ काम कर रहे हैं।",
+      "p.work": "ब्रांड्स के लिए चुनिंदा काम",
+      "p.std": "the soft bunny का मानक",
+      "p.s1": "100% प्लांट-बेस्ड। हर उत्पाद, हर प्लेट।",
+      "p.s2": "हमेशा स्पष्ट। साझेदारी हर बार बताई जाती है।",
+      "p.s3": "सिर्फ़ वही चीज़ें जो मैं खुद इस्तेमाल करूँ, ताकि सिफ़ारिश का कोई मतलब हो।",
+      "p.s4": "डाइट कल्चर, डिटॉक्स या वज़न घटाने वाले उत्पाद नहीं।"
     },
     "id": {
       "set.title": "pengaturan",
@@ -298,7 +386,15 @@ const linkLocales = {
       "c.collab_s": "cakupan, hak pakai, dan batas yang tak kulewati",
       "c.email_t": "surel",
       "c.site_t": "kunjungi situs lengkap",
-      "guide.status": "Panduan sedang dikembangkan. Belum dijual."
+      "guide.status": "Panduan sedang dikembangkan. Belum dijual.",
+      "p.brands": "merek yang pernah bekerja sama dengan saya",
+      "p.note": "Kemitraan dan kolaborasi hadiah di masa lalu. Tercantumnya sebuah merek bukan berarti kami sedang bekerja sama saat ini.",
+      "p.work": "pilihan karya untuk merek",
+      "p.std": "standar the soft bunny",
+      "p.s1": "100% nabati. Setiap produk, setiap piring.",
+      "p.s2": "Selalu diungkapkan. Kemitraan selalu diberi label.",
+      "p.s3": "Hanya yang akan saya pakai sendiri, agar rekomendasinya berarti.",
+      "p.s4": "Tanpa budaya diet, detoks, atau produk penurun berat badan."
     },
     "th": {
       "set.title": "การตั้งค่า",
@@ -316,7 +412,15 @@ const linkLocales = {
       "c.collab_s": "ขอบเขต สิทธิ์การใช้งาน และเส้นที่ฉันไม่ข้าม",
       "c.email_t": "อีเมล",
       "c.site_t": "ไปที่เว็บไซต์เต็ม",
-      "guide.status": "คู่มืออยู่ระหว่างการจัดทำ ยังไม่เปิดจำหน่าย"
+      "guide.status": "คู่มืออยู่ระหว่างการจัดทำ ยังไม่เปิดจำหน่าย",
+      "p.brands": "แบรนด์ที่เคยร่วมงานด้วย",
+      "p.note": "ความร่วมมือในอดีตและการร่วมงานแบบรับของขวัญ การมีชื่อแบรนด์ไม่ได้หมายความว่าขณะนี้เรากำลังร่วมงานกันอยู่",
+      "p.work": "ผลงานคัดสรรกับแบรนด์",
+      "p.std": "มาตรฐานของ the soft bunny",
+      "p.s1": "จากพืช 100% ทุกผลิตภัณฑ์ ทุกจาน",
+      "p.s2": "เปิดเผยเสมอ งานความร่วมมือมีการระบุทุกครั้ง",
+      "p.s3": "เฉพาะสิ่งที่ฉันจะใช้เอง เพื่อให้คำแนะนำมีความหมาย",
+      "p.s4": "ไม่มีวัฒนธรรมการลดน้ำหนักสุดโต่ง ดีท็อกซ์ หรือผลิตภัณฑ์ลดน้ำหนัก"
     },
     "it": {
       "set.title": "impostazioni",
@@ -334,7 +438,15 @@ const linkLocales = {
       "c.collab_s": "ambito, diritti d'uso e i limiti che non supero",
       "c.email_t": "e-mail",
       "c.site_t": "visita il sito completo",
-      "guide.status": "Guida in preparazione. Non ancora in vendita."
+      "guide.status": "Guida in preparazione. Non ancora in vendita.",
+      "p.brands": "i brand con cui ho lavorato",
+      "p.note": "Collaborazioni passate e collaborazioni con prodotti in omaggio. La presenza di un brand non significa che stiamo lavorando insieme ora.",
+      "p.work": "selezione di lavori per i brand",
+      "p.std": "lo standard the soft bunny",
+      "p.s1": "100% vegetale. Ogni prodotto, ogni piatto.",
+      "p.s2": "Sempre dichiarato. Le collaborazioni sono segnalate, ogni volta.",
+      "p.s3": "Solo ciò che userei davvero, perché il consiglio abbia valore.",
+      "p.s4": "Niente cultura della dieta, detox o prodotti dimagranti."
     },
     "tr": {
       "set.title": "ayarlar",
@@ -352,7 +464,15 @@ const linkLocales = {
       "c.collab_s": "kapsam, kullanım hakları ve aşmadığım sınırlar",
       "c.email_t": "e-posta",
       "c.site_t": "tüm siteyi gez",
-      "guide.status": "Rehber hazırlanıyor. Henüz satışta değil."
+      "guide.status": "Rehber hazırlanıyor. Henüz satışta değil.",
+      "p.brands": "birlikte çalıştığım markalar",
+      "p.note": "Geçmiş iş birlikleri ve hediye ürün çalışmaları. Bir markanın burada yer alması şu anda birlikte çalıştığımız anlamına gelmez.",
+      "p.work": "seçili marka çalışmaları",
+      "p.std": "the soft bunny standardı",
+      "p.s1": "%100 bitkisel. Her ürün, her tabak.",
+      "p.s2": "Her zaman açıkça belirtilir. İş birlikleri her seferinde etiketlenir.",
+      "p.s3": "Yalnızca kendim kullanacağım şeyler; böylece tavsiyenin bir anlamı olur.",
+      "p.s4": "Diyet kültürü, detoks ya da zayıflama ürünü yok."
     },
     "tl": {
       "set.title": "mga setting",
@@ -370,7 +490,15 @@ const linkLocales = {
       "c.collab_s": "saklaw, karapatang gamitin, at mga linyang hindi ko tinatawid",
       "c.email_t": "email",
       "c.site_t": "bisitahin ang buong site",
-      "guide.status": "Ginagawa pa ang gabay. Hindi pa ito ibinebenta."
+      "guide.status": "Ginagawa pa ang gabay. Hindi pa ito ibinebenta.",
+      "p.brands": "mga brand na nakatrabaho ko",
+      "p.note": "Mga nakaraang partnership at gifted na kolaborasyon. Hindi ibig sabihin ng pagkakalista ng brand na magkatrabaho kami ngayon.",
+      "p.work": "piling gawa para sa mga brand",
+      "p.std": "ang pamantayan ng the soft bunny",
+      "p.s1": "100% plant-based. Bawat produkto, bawat plato.",
+      "p.s2": "Laging inihahayag. May label ang mga partnership, sa bawat pagkakataon.",
+      "p.s3": "Mga bagay lang na gagamitin ko mismo, para may saysay ang rekomendasyon.",
+      "p.s4": "Walang diet culture, detox, o produktong pampapayat."
     },
     "pl": {
       "set.title": "ustawienia",
@@ -388,7 +516,15 @@ const linkLocales = {
       "c.collab_s": "zakres, prawa do użycia i granice, których nie przekraczam",
       "c.email_t": "e-mail",
       "c.site_t": "zobacz całą stronę",
-      "guide.status": "Przewodnik jest w przygotowaniu. Jeszcze nie jest w sprzedaży."
+      "guide.status": "Przewodnik jest w przygotowaniu. Jeszcze nie jest w sprzedaży.",
+      "p.brands": "moje współprace z markami",
+      "p.note": "Wcześniejsze partnerstwa i współprace z prezentami. Obecność marki na liście nie oznacza, że współpracujemy teraz.",
+      "p.work": "wybrane prace dla marek",
+      "p.std": "standard the soft bunny",
+      "p.s1": "100% roślinnie. Każdy produkt, każdy talerz.",
+      "p.s2": "Zawsze oznaczone. Współprace są opisywane za każdym razem.",
+      "p.s3": "Tylko rzeczy, z których korzystam osobiście, żeby rekomendacja coś znaczyła.",
+      "p.s4": "Żadnej kultury diet, detoksów ani produktów odchudzających."
     },
     "nl": {
       "set.title": "instellingen",
@@ -406,7 +542,15 @@ const linkLocales = {
       "c.collab_s": "omvang, gebruiksrechten en de grenzen die ik niet overschrijd",
       "c.email_t": "e-mail",
       "c.site_t": "bekijk de hele site",
-      "guide.status": "De gids is in ontwikkeling. Nog niet te koop."
+      "guide.status": "De gids is in ontwikkeling. Nog niet te koop.",
+      "p.brands": "merken waarmee ik heb gewerkt",
+      "p.note": "Eerdere samenwerkingen en cadeausamenwerkingen. Een vermelding betekent niet dat we nu samenwerken.",
+      "p.work": "geselecteerd werk voor merken",
+      "p.std": "de soft bunny-standaard",
+      "p.s1": "100% plantaardig. Elk product, elk bord.",
+      "p.s2": "Altijd vermeld. Samenwerkingen worden elke keer aangegeven.",
+      "p.s3": "Alleen dingen die ik zelf zou gebruiken, zodat de aanbeveling iets betekent.",
+      "p.s4": "Geen dieetcultuur, detox of afslankproducten."
     },
     "fa": {
       "set.title": "تنظیمات",
@@ -424,7 +568,15 @@ const linkLocales = {
       "c.collab_s": "دامنه، حق استفاده، و خط‌هایی که از آن‌ها نمی‌گذرم",
       "c.email_t": "ایمیل",
       "c.site_t": "دیدن سایت کامل",
-      "guide.status": "راهنما در حال آماده‌سازی است. هنوز برای فروش نیست."
+      "guide.status": "راهنما در حال آماده‌سازی است. هنوز برای فروش نیست.",
+      "p.brands": "برندهایی که با آن‌ها کار کرده‌ام",
+      "p.note": "همکاری‌های گذشته و همکاری‌های هدیه‌ای. آمدن نام یک برند به این معنا نیست که اکنون با هم کار می‌کنیم.",
+      "p.work": "نمونه‌کارهای منتخب برای برندها",
+      "p.std": "استاندارد the soft bunny",
+      "p.s1": "۱۰۰٪ گیاهی. هر محصول، هر بشقاب.",
+      "p.s2": "همیشه اعلام می‌شود. همکاری‌ها هر بار مشخص می‌شوند.",
+      "p.s3": "فقط چیزهایی که خودم استفاده می‌کنم، تا توصیه معنا داشته باشد.",
+      "p.s4": "نه به فرهنگ رژیم، سم‌زدایی یا محصولات کاهش وزن."
     }
   }
 };

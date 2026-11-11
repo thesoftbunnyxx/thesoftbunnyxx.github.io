@@ -12,7 +12,7 @@
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
   }
 })();
-/* Scroll reveals: hide-then-reveal only when motion is welcome; a 2.5 s failsafe shows everything if motion.js never runs. */
+/* Scroll reveals: hide-then-reveal only when motion is welcome; a 2.5 s failsafe shows everything if the motion script never runs. */
 (function () {
   var root = document.documentElement;
   try {
