@@ -65,3 +65,4 @@ html:not(.mono) .language-control select { color:#fff; border-color:rgba(255,255
 .lk-tag { margin-top:26px }
 html.mono .lk-logo { color:#1f1f23 }
 html.mono .lk-logo .bf { fill:#1f1f23 } html.mono .lk-logo .hz { stroke:#1f1f23 } html.mono .lk-logo .buns { filter:none } html.mono .lk-logo .pl { display:none } html.mono .lk-logo { --xx:#1f1f23 }
+.lk-rows .kofi { margin:18px 0; max-width:none }

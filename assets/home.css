@@ -409,3 +409,70 @@ body.sb-locked { overflow:hidden }
 @keyframes breathe { 0%,100% { box-shadow:0 6px 18px -8px rgba(199,125,186,.35) } 50% { box-shadow:0 8px 30px -4px rgba(181,205,249,.75),0 0 22px rgba(249,198,229,.55) } }
 @media(prefers-reduced-motion:reduce) { .sb-fab-message { animation:none } }
 .sb-pop-title,.sb-drawer-head p { text-transform:lowercase }
+
+/* Ko-fi: "buy the bunny a coffee". A real projectile: the bunny crouches, leaps (steady across, rising and
+   falling under gravity), lands on the cup rim and settles; a hairline trail draws behind it and fades.
+   Pure CSS, 7s loop; hover quickens the steam. Reduced motion: the bunny rests at the start, no trail. */
+.kofi { --kb:#9d93e2; position:relative; display:grid; grid-template-columns:240px 1fr auto; align-items:center; gap:22px; max-width:640px; margin:48px auto 0; padding:18px 24px 18px 12px; border:1px solid var(--hair); border-radius:22px; background:linear-gradient(180deg,var(--surface),var(--blush)); color:var(--ink); text-decoration:none; text-align:start; overflow:hidden; transition:border-color .5s var(--ease),box-shadow .6s var(--ease),transform .6s var(--ease) }
+html.dark .kofi { --kb:#c9bdf6 }
+.kofi::before { content:''; position:absolute; inset:auto 0 0 0; height:1px; background:var(--aurora); transform:scaleX(0); transform-origin:left; transition:transform .9s var(--ease) }
+.kofi:hover,.kofi:focus-visible { border-color:transparent; box-shadow:var(--shadow); transform:translateY(-2px) }
+.kofi:hover::before,.kofi:focus-visible::before { transform:scaleX(1) }
+.kofi-art { position:relative; width:240px; height:90px }
+.kofi-art svg.scene { position:absolute; inset:0; width:240px; height:90px; overflow:visible }
+.kofi-art .hz { stroke:var(--hair); stroke-width:1 }
+.kofi-art .trail { fill:none; stroke:url(#kofi-rb); stroke-width:1; stroke-linecap:round; stroke-dasharray:1 1; stroke-dashoffset:1; opacity:0; animation:kofi-trail 7s infinite }
+.kofi-art .cup { fill:none; stroke:var(--muted); stroke-width:1.1; stroke-linecap:round; stroke-linejoin:round }
+.kofi-art .steam { fill:none; stroke:var(--accent); stroke-width:1; stroke-linecap:round; opacity:0; animation:kofi-steam 4.2s ease-in-out infinite }
+.kofi-art .steam + .steam { animation-delay:2.1s }
+.kofi:hover .steam,.kofi:focus-visible .steam { animation-duration:2.6s }
+.kofi-art .glint { fill:var(--accent); opacity:0; transform-box:fill-box; transform-origin:center; animation:kofi-glint 7s infinite }
+.kofi-bun { position:absolute; left:0; top:52px; width:22px; height:24px; color:var(--kb); transform:translateX(19px); animation:kofi-x 7s infinite }
+.kofi-y { display:block; width:100%; height:100%; animation:kofi-y 7s infinite }
+.kofi-y svg { display:block; width:100%; height:100%; fill:currentColor; transform-origin:50% 100%; animation:kofi-squash 7s infinite }
+.kofi-text small.kicker { display:block; font:400 .64rem/1 var(--sans); letter-spacing:.32em; text-transform:uppercase; color:var(--muted); margin-bottom:8px }
+.kofi-text strong { display:block; font:200 1.45rem/1.2 var(--display); letter-spacing:-.03em; text-transform:lowercase }
+.kofi-text strong em { font-family:var(--serif); font-style:italic; font-weight:300; background:var(--iri); -webkit-background-clip:text; background-clip:text; color:transparent }
+.kofi-text small.sub { display:block; margin-top:5px; font-size:.78rem; line-height:1.5; color:var(--muted) }
+.kofi-go { font:500 .66rem/1 var(--sans); letter-spacing:.24em; text-transform:uppercase; color:var(--accent); white-space:nowrap; transition:transform .5s var(--ease) }
+.kofi:hover .kofi-go,.kofi:focus-visible .kofi-go { transform:translateX(5px) }
+/* across: still, then constant speed (x 30 to 194), then reset while hidden */
+@keyframes kofi-x {
+  0%,36% { transform:translateX(19px); opacity:1; animation-timing-function:linear }
+  58% { transform:translateX(183px); opacity:1 }
+  64% { transform:translateX(183px); opacity:1; animation-timing-function:ease-in }
+  71% { transform:translateX(183px); opacity:0 }
+  71.1%,78% { transform:translateX(19px); opacity:0; animation-timing-function:ease-out }
+  86%,100% { transform:translateX(19px); opacity:1 }
+}
+/* up and down: decelerate to the apex (46px up), accelerate down to the rim (18px up) */
+@keyframes kofi-y {
+  0%,36% { transform:translateY(0); animation-timing-function:cubic-bezier(.33,.67,.67,1) }
+  48.4% { transform:translateY(-46px); animation-timing-function:cubic-bezier(.33,0,.67,.33) }
+  58%,71% { transform:translateY(-18px) }
+  71.1%,100% { transform:translateY(0) }
+}
+/* crouch, stretch, settle */
+@keyframes kofi-squash {
+  0%,31% { transform:scale(1,1) }
+  35% { transform:scale(1.06,.9); animation-timing-function:cubic-bezier(.2,.8,.3,1) }
+  39% { transform:scale(.96,1.05) }
+  45%,57% { transform:scale(1,1) }
+  59.5% { transform:scale(1.06,.92); animation-timing-function:cubic-bezier(.2,.8,.3,1) }
+  64%,100% { transform:scale(1,1) }
+}
+/* the trail draws at the bunny's arc speed (quick, slow at the apex, quick), then fades */
+@keyframes kofi-trail {
+  0%,36% { stroke-dashoffset:1; opacity:.85; animation-timing-function:cubic-bezier(.2,.42,.8,.58) }
+  58% { stroke-dashoffset:0; opacity:.85; animation-timing-function:ease-in-out }
+  76%,100% { stroke-dashoffset:0; opacity:0 }
+}
+@keyframes kofi-glint { 0%,58.5% { opacity:0; transform:scale(.3) } 61.5% { opacity:1; transform:scale(1) } 70%,100% { opacity:0; transform:scale(.5) } }
+@keyframes kofi-steam { 0% { opacity:0; transform:translateY(3px) } 35% { opacity:.6 } 100% { opacity:0; transform:translateY(-10px) } }
+@media(max-width:620px) {
+  .kofi { grid-template-columns:1fr; justify-items:center; text-align:center; padding:16px 18px 22px; gap:10px }
+}
+@media(prefers-reduced-motion:reduce) {
+  .kofi-bun,.kofi-y,.kofi-y svg,.kofi-art .trail,.kofi-art .glint { animation:none } .kofi-art .steam { opacity:.45; animation:none }
+}
+html.rm .kofi-bun { transform:translateX(19px); opacity:1 } html.rm .kofi-y { transform:none } html.rm .kofi-art .trail { opacity:0 } html.rm .kofi-art .steam { opacity:.45 }
