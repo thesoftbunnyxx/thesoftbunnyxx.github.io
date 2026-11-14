@@ -246,6 +246,11 @@ html.mono .strip-track img { filter:grayscale(1) }
 .about h2 { margin-bottom:30px }
 .about p:not(.kicker) { color:var(--muted); margin:0 auto 18px; max-width:38rem }
 .about .quiet { margin-top:14px }
+/* reading highlight (reading-highlight.css/.js): faded ahead, one line lit in the
+   site's iridescent --iri, full ink once read. On html so light/dark both follow. */
+html { --rh-ink:var(--ink); --rh-bg:var(--paper); --rh-active:var(--accent); --rh-active-gradient:var(--iri) }
+.about p[data-rh] { color:var(--ink) }
+html.rm [data-rh] { --rh-off:1 }
 .contact { text-align:center; padding-top:clamp(56px,7vw,96px) }
 .contact-line { position:relative; height:1px; width:min(420px,70%); margin:0 auto clamp(56px,7vw,88px); background:linear-gradient(90deg,transparent,var(--hair),transparent) }
 .contact-line .needle { position:absolute; left:50%; top:-8px; width:16px; height:16px; translate:-50% 0; color:var(--accent); animation:twinkle 5s ease-in-out infinite }

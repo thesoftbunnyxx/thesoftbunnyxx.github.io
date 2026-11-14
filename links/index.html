@@ -16,14 +16,16 @@
 <link rel="icon" type="image/svg+xml" href="../assets/bunny.svg">
 <script src="../assets/preferences.js"></script>
 <link rel="preload" href="../assets/fonts/Poppins-ExtraLight.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="../assets/home.css?v=20261112">
+<link rel="stylesheet" href="../assets/home.css?v=20261113">
+<link rel="stylesheet" href="../assets/reading-highlight.css?v=3">
 <link rel="stylesheet" href="../assets/mark.css?v=20261112">
 <link rel="stylesheet" href="../assets/links.css?v=20261112">
 <script src="../assets/site.js?v=20261112" defer></script>
-<script src="../assets/links-languages.js?v=20261112" defer></script>
+<script src="../assets/links-languages.js?v=20261113" defer></script>
 <script src="../assets/home.js?v=20261112" defer></script>
 <script src="../assets/mark.js?v=20261112" defer></script>
 <script src="../assets/sky.js?v=20261112" defer></script>
+<script src="../assets/reading-highlight.js?v=4" defer></script>
 </head>
 <body class="links">
 <a lang="en" class="skip" href="#main">Skip to content</a>
@@ -32,10 +34,10 @@
     <symbol id="sb-star" viewBox="0 0 24 24"><path d="M12 0C12.5 7.6 16.4 11.5 24 12C16.4 12.5 12.5 16.4 12 24C11.5 16.4 7.6 12.5 0 12C7.6 11.5 11.5 7.6 12 0Z"/></symbol>
   </defs>
 </svg>
-<main class="lk" id="main">
+<main class="lk" id="main" data-rh-scope>
 <div class="lk-sky sbx-stage sky" data-sky aria-hidden="true"></div>
 <div class="lk-bar"><a class="quiet" href="../" lang="en">← full website</a><div class="language-control" hidden><label class="sr-only" for="language" data-i18n="set.lang">Language</label><select id="language"></select></div></div>
-<header class="lk-intro">
+<header class="lk-intro" data-rh-skip>
 <h1 class="sr-only" lang="en" dir="ltr">the soft bunny xx</h1>
 <div class="lk-logo" data-logo="stack" data-mode="night" data-pure data-live lang="en" dir="ltr"></div>
 <p class="lk-tag" data-r data-i18n="h.tag">Plant-based food, made beautiful.</p>
@@ -43,14 +45,14 @@
 <p class="lk-proof" lang="en" dir="ltr" data-r><span><strong>22K+</strong> on Instagram</span><span><strong>20</strong> brands featured</span><span><strong>100%</strong> plant-based</span></p>
 </header>
 <nav class="lk-rows" aria-label="Links">
-<a class="lk-row" data-r href="../"><span><strong data-i18n="c.site_t">Explore the full site</strong><small lang="en" dir="ltr">thesoftbunnyxx.com</small></span><span class="lk-arrow" aria-hidden="true">→</span></a>
-<a class="lk-row" data-r href="../#brands"><span><strong data-i18n="g.work">Work with me</strong><small data-i18n="c.collab_s">Scope, usage rights, and a thoughtful approach.</small></span><span class="lk-arrow" aria-hidden="true">→</span></a>
+<a class="lk-row" data-r data-rh href="../"><span><strong data-i18n="c.site_t">Explore the full site</strong><small lang="en" dir="ltr">thesoftbunnyxx.com</small></span><span class="lk-arrow" aria-hidden="true">→</span></a>
+<a class="lk-row" data-r data-rh href="../#brands"><span><strong data-i18n="g.work">Work with me</strong><small data-i18n="c.collab_s">Posts, reels and photos for plant-based brands.</small></span><span class="lk-arrow" aria-hidden="true">→</span></a>
 <a class="kofi" href="https://ko-fi.com/thesoftbunnyxx/" target="_blank" rel="noopener noreferrer" data-r>
 <span class="kofi-art" aria-hidden="true"><svg class="scene" viewBox="0 0 240 90" width="240" height="90"><defs><linearGradient id="kofi-rb" gradientUnits="userSpaceOnUse" x1="30" x2="196" y1="0" y2="0"><stop offset="0" stop-color="#b5c4f4"/><stop offset=".35" stop-color="#cfaef0"/><stop offset=".62" stop-color="#f3b4d0"/><stop offset=".82" stop-color="#f6d2a6"/><stop offset="1" stop-color="#8fd6c4"/></linearGradient></defs><line class="hz" x1="6" x2="234" y1="76" y2="76"/><path class="trail" pathLength="1" d="M30 76 Q 112 -5.9 194 58"/><path class="cup" d="M182 58 H206 V64 a12 11 0 0 1 -24 0 Z M206 61 h3.5 a3.6 3.6 0 0 1 0 7.2 h-4.5 M178 76 H210"/><path class="steam" d="M190 51 c-2.2 -3 2.2 -5 0 -9"/><path class="steam" d="M198 51 c-2.2 -3 2.2 -5 0 -9"/><path class="glint" d="M214 36 C214.2 39.6 214.7 41.6 216.4 42 C214.7 42.4 214.2 44.4 214 48 C213.8 44.4 213.3 42.4 211.6 42 C213.3 41.6 213.8 39.6 214 36Z"/></svg><span class="kofi-bun"><span class="kofi-y"><svg viewBox="0 0 44 47" width="22" height="24"><ellipse cx="21.5" cy="34" rx="11" ry="11.5"/><circle cx="13.5" cy="21" r="7"/><ellipse cx="11.5" cy="8" rx="2.3" ry="8" transform="rotate(-7 11.5 8)"/><ellipse cx="17" cy="8.5" rx="2.3" ry="8" transform="rotate(9 17 8.5)"/><circle cx="32" cy="40" r="3"/><ellipse cx="13" cy="44" rx="5" ry="2"/></svg></span></span></span>
-<span class="kofi-text"><small class="kicker" lang="en">season one · ko-fi</small><strong lang="en">buy the bunny <em>a coffee</em></strong><small class="sub" data-i18n="c.kofi_s">A little tip jar — never expected, always appreciated.</small></span>
+<span class="kofi-text"><small class="kicker" lang="en">season one · ko-fi</small><strong lang="en">buy the bunny <em>a coffee</em></strong><small class="sub" data-i18n="c.kofi_s">Every cup goes to ingredients. Never expected, always appreciated.</small></span>
 <span class="kofi-go" aria-hidden="true">sip →</span>
 </a>
-<a class="lk-row" data-r href="mailto:TheSoftBunnyxx@gmail.com"><span><strong data-i18n="c.email_t">Email</strong><small lang="en" dir="ltr">TheSoftBunnyxx@gmail.com</small></span><span class="lk-arrow" aria-hidden="true">→</span></a>
+<a class="lk-row" data-r data-rh href="mailto:TheSoftBunnyxx@gmail.com"><span><strong data-i18n="c.email_t">Email</strong><small lang="en" dir="ltr">TheSoftBunnyxx@gmail.com</small></span><span class="lk-arrow" aria-hidden="true">→</span></a>
 </nav>
 <nav class="socials" data-r aria-label="Social accounts"><a href="https://www.instagram.com/thesoftbunnyxx" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@thesoftbunnyxx" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3.5v11a3.6 3.6 0 1 1-3.6-3.6"/><path d="M14 3.5c.5 2.6 2.3 4.3 5 4.5"/></svg></a><a href="https://www.youtube.com/@thesoftbunnyxx" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="5.8" width="18.4" height="12.4" rx="4"/><path d="M10.4 9.4v5.2l4.4-2.6z" fill="currentColor"/></svg></a><a href="https://www.pinterest.com/thesoftbunnyxx/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M10.6 8.6c2.9-1.1 5 .7 4.5 3-.4 2-2.5 2.7-3.6 1.6"/><path d="M11.7 10.4 9.7 19.6"/></svg></a></nav>
 <section class="lk-sec" aria-labelledby="bio-brands-title" data-r>
@@ -64,7 +66,7 @@
 </section>
 <section class="lk-sec" aria-labelledby="bio-standard-title" data-r>
 <h2 id="bio-standard-title" data-i18n="p.std">the soft bunny standard</h2>
-<ul class="checks"><li><svg aria-hidden="true"><use href="#sb-star"/></svg><span data-i18n="p.s1">100% plant-based. Every product, every plate.</span></li><li><svg aria-hidden="true"><use href="#sb-star"/></svg><span data-i18n="p.s2">Always disclosed. Partnerships are labeled, every time.</span></li><li><svg aria-hidden="true"><use href="#sb-star"/></svg><span data-i18n="p.s3">Only things I’d use myself, so the recommendation means something.</span></li><li class="no"><span aria-hidden="true">×</span><span data-i18n="p.s4">No diet culture, detox, or weight-loss products.</span></li></ul>
+<ul class="checks" data-rh><li><svg aria-hidden="true"><use href="#sb-star"/></svg><span data-i18n="p.s1">100% plant-based. Every product, every plate.</span></li><li><svg aria-hidden="true"><use href="#sb-star"/></svg><span data-i18n="p.s2">Always disclosed. Partnerships are labeled, every time.</span></li><li><svg aria-hidden="true"><use href="#sb-star"/></svg><span data-i18n="p.s3">Only things I’d use myself, so the recommendation means something.</span></li><li class="no"><span aria-hidden="true">×</span><span data-i18n="p.s4">No diet culture, detox or weight-loss products.</span></li></ul>
 </section>
 <p class="fine lk-note" lang="en" dir="ltr">Language selection translates these link descriptions. The full website is in English.</p>
 </main>
@@ -72,6 +74,7 @@
 <p class="foot-line">a little more beauty, <em>a little more care.</em></p>
 <p>© 2026 the soft bunny xx</p>
 </footer>
-<script src="../assets/kofi-nudge.js?v=2" defer data-url="https://ko-fi.com/thesoftbunnyxx/" data-title="buy the bunny a coffee?" data-line="every coffee keeps the plant-based recipes coming." data-cta="support on ko-fi" data-tone="light" data-side="left"></script>
+<script src="../assets/kofi-nudge.js?v=2" defer data-url="https://ko-fi.com/thesoftbunnyxx/" data-title="buy the bunny a coffee?" data-line="every cup keeps the plant-based recipes coming." data-cta="support on ko-fi" data-tone="light" data-side="left"></script>
+<script src="../assets/kofi-panel.js?v=20261113" defer data-url="https://ko-fi.com/thesoftbunnyxx/" data-label="season one · ko-fi" data-title="buy the bunny *a coffee*" data-line="Every cup keeps the plant-based recipes coming. Never expected, always appreciated." data-out="open ko-fi in a new tab" data-head="Poppins,system-ui,sans-serif" data-serif="'Noto Serif Display',Georgia,serif" data-sans="Montserrat,system-ui,sans-serif" data-em="iri" data-hue="aurora"></script>
 </body>
 </html>
