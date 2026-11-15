@@ -191,7 +191,22 @@
   /* Top layer: unread/read per line, made transparent where the accent shows.
      Under it, the accent fill (--rh-fill) is painted only behind the lines that
      carry some accent, so a translucent unread colour never lets it bleed. */
+  /* Safari and in-app browsers (WebKit) stop painting text clipped with
+     background-clip:text while a child is animating on its own layer, so a
+     passage goes live only after its own reveal animations have finished. */
+  function busy(el) {
+    if (!el.getAnimations) return false;
+    var run = el.getAnimations({ subtree: true }).filter(function (a) { return a.playState === 'running' || a.playState === 'pending'; });
+    if (!run.length) return false;
+    if (!el.__rhWait) {
+      el.__rhWait = true;
+      Promise.all(run.map(function (a) { return a.finished.catch(function () {}); })).then(function () { el.__rhWait = false; queue(); });
+    }
+    return true;
+  }
+
   function paint(el, focusY) {
+    if (!el.classList.contains('rh-live') && busy(el)) return;
     var top = el.getBoundingClientRect().top, L = lines(el, top), n = L.length;
     if (!n) return;
     var lh = 0;
